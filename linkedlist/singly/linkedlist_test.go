@@ -240,3 +240,59 @@ func TestList_IsPresent(t *testing.T) {
 		}
 	})
 }
+func TestList_RemoveHead(t *testing.T) {
+	l := NewList()
+
+	t.Run("empty list", func(t *testing.T) {
+		_, err := l.RemoveHead()
+		assertError(t, err, ErrEmptyList)
+	})
+
+	l.AddHead(2)
+	t.Run("[2]", func(t *testing.T) {
+		expected := 2
+		got, err := l.RemoveHead()
+		if got != expected {
+			t.Errorf("got %d want %d", got, expected)
+		}
+		assertError(t, err, nil)
+
+		t.Run("String", func(t *testing.T) {
+			expected := "[]"
+			got := l.String()
+			if got != expected {
+				t.Errorf("got %s want %s", got, expected)
+			}
+		})
+
+	})
+
+	l.AddHead(3)
+	l.AddHead(4)
+	l.AddHead(5)
+	t.Run("[5, 4, 3]", func(t *testing.T) {
+		expected := 5
+		got, err := l.RemoveHead()
+		if got != expected {
+			t.Errorf("got %d want %d", got, expected)
+		}
+		assertError(t, err, nil)
+
+		t.Run("String", func(t *testing.T) {
+			expected := "[4, 3]"
+			got := l.String()
+			if got != expected {
+				t.Errorf("got %s want %s", got, expected)
+			}
+		})
+	})
+
+}
+
+func assertError(t *testing.T, got, want error) {
+	t.Helper()
+
+	if got != want {
+		t.Errorf("got error '%s' want '%s'", got, want)
+	}
+}

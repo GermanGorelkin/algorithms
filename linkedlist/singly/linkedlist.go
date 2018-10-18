@@ -2,8 +2,11 @@ package singly
 
 import (
 	"bytes"
+	"errors"
 	"strconv"
 )
+
+var ErrEmptyList = errors.New("list is empty")
 
 type Node struct {
 	value int
@@ -93,4 +96,14 @@ func (l *List) IsPresent(data int) bool {
 		t = t.next
 	}
 	return false
+}
+
+func (l *List) RemoveHead() (int, error) {
+	if l.IsEmpty() {
+		return 0, ErrEmptyList
+	}
+	value := l.head.value
+	l.head = l.head.next
+	l.count--
+	return value, nil
 }
