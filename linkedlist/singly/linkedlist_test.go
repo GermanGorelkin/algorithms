@@ -190,3 +190,53 @@ func TestList_SortedInsert(t *testing.T) {
 		}
 	})
 }
+func TestList_IsPresent(t *testing.T) {
+	l := NewList()
+
+	l.AddHead(2)
+	l.AddHead(3)
+	l.AddHead(14)
+	l.AddHead(100)
+	t.Run("2", func(t *testing.T) {
+		expected := true
+		got := l.IsPresent(2)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+	})
+	t.Run("3", func(t *testing.T) {
+		expected := true
+		got := l.IsPresent(3)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+	})
+	t.Run("100", func(t *testing.T) {
+		expected := true
+		got := l.IsPresent(100)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+	})
+	t.Run("-1", func(t *testing.T) {
+		expected := false
+		got := l.IsPresent(-1)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+	})
+	t.Run("5", func(t *testing.T) {
+		expected := false
+		got := l.IsPresent(5)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+	})
+	t.Run("222", func(t *testing.T) {
+		expected := false
+		got := l.IsPresent(222)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+	})
+}

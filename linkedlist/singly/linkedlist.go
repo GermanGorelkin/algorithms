@@ -83,3 +83,14 @@ func (l *List) SortedInsert(value int) {
 	n.next = c.next
 	c.next = n
 }
+
+func (l *List) IsPresent(data int) bool {
+	t := l.head
+	for t != nil {
+		if t.value == data {
+			return true
+		}
+		t = t.next
+	}
+	return false
+}
