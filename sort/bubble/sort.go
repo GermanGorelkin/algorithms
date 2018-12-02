@@ -8,7 +8,6 @@ func Sort(arr []int) {
 				arr[j+1], arr[j] = arr[j], arr[j+1]
 			}
 		}
-
 	}
 }
 
@@ -23,6 +22,5 @@ func Sort2(arr []int) {
 				swapped = 1
 			}
 		}
-
 	}
 }
