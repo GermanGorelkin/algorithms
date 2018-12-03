@@ -157,3 +157,22 @@ func (l *List) DeleteNodes(delValue int) (isDel bool, err error) {
 
 	return
 }
+
+func (l *List) FreeList() {
+	l.count = 0
+	l.head = nil
+}
+
+func (l *List) Reverse() {
+	curr := l.head
+	var prev, next *Node
+
+	for curr != nil {
+		next = curr.next
+		curr.next = prev
+		prev = curr
+		curr = next
+	}
+
+	l.head = prev
+}
