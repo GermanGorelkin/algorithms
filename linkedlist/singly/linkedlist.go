@@ -132,3 +132,28 @@ func (l *List) DeleteNode(delValue int) (bool, error) {
 
 	return false, nil
 }
+
+// DeleteNode удаляет все элементы которые равены delValue
+func (l *List) DeleteNodes(delValue int) (isDel bool, err error) {
+	if l.IsEmpty() {
+		return false, ErrEmptyList
+	}
+
+	if l.head.value == delValue {
+		l.head = l.head.next
+		l.count--
+		isDel = true
+	}
+
+	t := l.head
+	for t != nil && t.next != nil {
+		if t.next.value == delValue {
+			t.next = t.next.next
+			l.count--
+			isDel = true
+		}
+		t = t.next
+	}
+
+	return
+}

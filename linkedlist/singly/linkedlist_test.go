@@ -318,10 +318,79 @@ func TestList_DeleteNode(t *testing.T) {
 		})
 	})
 
+	l.AddTail(delValue)
+	t.Run("delete 100 from [5, 4, 3, 100]", func(t *testing.T) {
+		expected := true
+		got, err := l.DeleteNode(delValue)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+		assertError(t, err, nil)
+
+		t.Run("String", func(t *testing.T) {
+			expected := "[5, 4, 3]"
+			got := l.String()
+			if got != expected {
+				t.Errorf("got %s want %s", got, expected)
+			}
+		})
+	})
+
 	delValue = 200
 	t.Run("delete 200 from [5, 4, 3]", func(t *testing.T) {
 		expected := false
 		got, err := l.DeleteNode(delValue)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+		assertError(t, err, nil)
+
+		t.Run("String", func(t *testing.T) {
+			expected := "[5, 4, 3]"
+			got := l.String()
+			if got != expected {
+				t.Errorf("got %s want %s", got, expected)
+			}
+		})
+	})
+
+}
+func TestList_DeleteNodes(t *testing.T) {
+	l := NewList()
+	delValue := 100
+
+	t.Run("empty list", func(t *testing.T) {
+		_, err := l.DeleteNode(delValue)
+		assertError(t, err, ErrEmptyList)
+	})
+
+	l.AddHead(delValue)
+	l.AddHead(3)
+	l.AddHead(4)
+	l.AddHead(delValue)
+	l.AddHead(5)
+	l.AddHead(delValue)
+	t.Run("delete 100 from [100, 5, 100, 4, 3, 100]", func(t *testing.T) {
+		expected := true
+		got, err := l.DeleteNodes(delValue)
+		if got != expected {
+			t.Errorf("got %t want %t", got, expected)
+		}
+		assertError(t, err, nil)
+
+		t.Run("String", func(t *testing.T) {
+			expected := "[5, 4, 3]"
+			got := l.String()
+			if got != expected {
+				t.Errorf("got %s want %s", got, expected)
+			}
+		})
+	})
+
+	delValue = 200
+	t.Run("delete 200 from [5, 4, 3]", func(t *testing.T) {
+		expected := false
+		got, err := l.DeleteNodes(delValue)
 		if got != expected {
 			t.Errorf("got %t want %t", got, expected)
 		}
