@@ -107,3 +107,28 @@ func (l *List) RemoveHead() (int, error) {
 	l.count--
 	return value, nil
 }
+
+// DeleteNode удаляет первый найденнный элемент который равен delValue
+func (l *List) DeleteNode(delValue int) (bool, error) {
+	if l.IsEmpty() {
+		return false, ErrEmptyList
+	}
+
+	if l.head.value == delValue {
+		l.head = l.head.next
+		l.count--
+		return true, nil
+	}
+
+	t := l.head
+	for t.next != nil {
+		if t.next.value == delValue {
+			t.next = t.next.next
+			l.count--
+			return true, nil
+		}
+		t = t.next
+	}
+
+	return false, nil
+}
