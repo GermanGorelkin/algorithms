@@ -1,6 +1,7 @@
 package sort
 
 import (
+	"github.com/stretchr/testify/assert"
 	"reflect"
 	"sort"
 	"testing"
@@ -14,9 +15,7 @@ func TestSort(t *testing.T) {
 
 		Sort(arr)
 
-		if !reflect.DeepEqual(arr, expected) {
-			t.Errorf("got %v\n want %v", arr, expected)
-		}
+		assert.Equal(t, expected, arr)
 	})
 
 	t.Run("random arr", func(t *testing.T) {
@@ -43,9 +42,7 @@ func TestSort2(t *testing.T) {
 
 		Sort2(arr)
 
-		if !reflect.DeepEqual(arr, expected) {
-			t.Errorf("got %v\n want %v", arr, expected)
-		}
+		assert.Equal(t, expected, arr)
 	})
 
 	t.Run("random arr", func(t *testing.T) {
