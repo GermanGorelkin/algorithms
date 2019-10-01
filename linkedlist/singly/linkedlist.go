@@ -176,3 +176,20 @@ func (l *List) Reverse() {
 
 	l.head = prev
 }
+
+func (l *List) ReverseRecurse() {
+	l.head = l.reverseRecurseUtil(l.head, nil)
+}
+func (l *List) reverseRecurseUtil(curr *Node, next *Node) *Node {
+	var ret *Node
+	if curr == nil {
+		return nil
+	}
+	if curr.next == nil {
+		curr.next = next
+		return curr
+	}
+	ret = l.reverseRecurseUtil(curr.next, curr)
+	curr.next = next
+	return ret
+}

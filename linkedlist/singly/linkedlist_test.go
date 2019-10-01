@@ -1,6 +1,9 @@
 package singly
 
-import "testing"
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestNewList(t *testing.T) {
 	l := NewList()
@@ -457,6 +460,32 @@ func TestList_Reverse(t *testing.T) {
 			t.Errorf("got %s want %s", got, expected)
 		}
 
+	})
+}
+
+func TestList_ReverseRecurse(t *testing.T) {
+	l := NewList()
+
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddTail(4)
+	l.AddTail(5)
+	t.Run("[1, 2, 3, 4, 5]", func(t *testing.T) {
+		expected := "[5, 4, 3, 2, 1]"
+		l.ReverseRecurse()
+		got := l.String()
+		assert.Equal(t, expected, got)
+
+	})
+
+	l.FreeList()
+	l.AddHead(1)
+	t.Run("[1]", func(t *testing.T) {
+		expected := "[1]"
+		l.ReverseRecurse()
+		got := l.String()
+		assert.Equal(t, expected, got)
 	})
 }
 
