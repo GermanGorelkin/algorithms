@@ -193,3 +193,14 @@ func (l *List) reverseRecurseUtil(curr *Node, next *Node) *Node {
 	curr.next = next
 	return ret
 }
+
+func (l *List) RemoveDuplicate() {
+	curr := l.head
+	for curr != nil {
+		if curr.next != nil && curr.value == curr.next.value {
+			curr.next = curr.next.next
+		} else {
+			curr = curr.next
+		}
+	}
+}

@@ -462,7 +462,6 @@ func TestList_Reverse(t *testing.T) {
 
 	})
 }
-
 func TestList_ReverseRecurse(t *testing.T) {
 	l := NewList()
 
@@ -486,6 +485,23 @@ func TestList_ReverseRecurse(t *testing.T) {
 		l.ReverseRecurse()
 		got := l.String()
 		assert.Equal(t, expected, got)
+	})
+}
+func TestList_RemoveDuplicate(t *testing.T) {
+	l := NewList()
+
+	l.SortedInsert(1)
+	l.SortedInsert(2)
+	l.SortedInsert(2)
+	l.SortedInsert(4)
+	l.SortedInsert(5)
+	l.SortedInsert(5)
+	t.Run("[1, 2, 2, 4, 5, 5]", func(t *testing.T) {
+		expected := "[1, 2, 4, 5]"
+		l.RemoveDuplicate()
+		got := l.String()
+		assert.Equal(t, expected, got)
+
 	})
 }
 
