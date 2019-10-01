@@ -252,3 +252,13 @@ func (l *List) compareListUtil(head1 *Node, head2 *Node) bool {
 		return l.compareListUtil(head1.next, head2.next)
 	}
 }
+
+func (l *List) FindLength() int {
+	curr := l.head
+	count := 0
+	for curr != nil {
+		count++
+		curr = curr.next
+	}
+	return count
+}
