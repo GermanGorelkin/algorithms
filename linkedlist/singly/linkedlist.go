@@ -204,3 +204,16 @@ func (l *List) RemoveDuplicate() {
 		}
 	}
 }
+
+func (l *List) CopyListReversed() *List {
+	var temp, temp2 *Node
+	curr := l.head
+	for curr != nil {
+		temp2 = &Node{curr.value, temp}
+		curr = curr.next
+		temp = temp2
+	}
+	ll2 := new(List)
+	ll2.head = temp
+	return ll2
+}

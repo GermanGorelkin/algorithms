@@ -504,6 +504,21 @@ func TestList_RemoveDuplicate(t *testing.T) {
 
 	})
 }
+func TestList_CopyListReversed(t *testing.T) {
+	l := NewList()
+
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddTail(4)
+	l.AddTail(5)
+	t.Run("[1, 2, 3, 4, 5]", func(t *testing.T) {
+		expected := "[5, 4, 3, 2, 1]"
+		got := l.CopyListReversed().String()
+		assert.Equal(t, expected, got)
+
+	})
+}
 
 func assertError(t *testing.T, got, want error) {
 	t.Helper()
