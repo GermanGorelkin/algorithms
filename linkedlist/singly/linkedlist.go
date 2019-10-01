@@ -217,3 +217,25 @@ func (l *List) CopyListReversed() *List {
 	ll2.head = temp
 	return ll2
 }
+
+func (l *List) CopyList() *List {
+	var head, tail, temp *Node
+	curr := l.head
+	if curr == nil {
+		ll2 := new(List)
+		ll2.head = nil
+		return ll2
+	}
+	head = &Node{curr.value, nil}
+	tail = head
+	curr = curr.next
+	for curr != nil {
+		temp = &Node{curr.value, nil}
+		tail.next = temp
+		tail = temp
+		curr = curr.next
+	}
+	ll2 := new(List)
+	ll2.head = head
+	return ll2
+}
