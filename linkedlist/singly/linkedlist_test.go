@@ -534,6 +534,39 @@ func TestList_CopyList(t *testing.T) {
 
 	})
 }
+func TestList_CompareList(t *testing.T) {
+	l := NewList()
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddTail(4)
+	l.AddTail(5)
+
+	t.Run("true", func(t *testing.T) {
+		l2 := NewList()
+		l2.AddTail(1)
+		l2.AddTail(2)
+		l2.AddTail(3)
+		l2.AddTail(4)
+		l2.AddTail(5)
+
+		expected := true
+		got := l.CompareList(l2)
+		assert.Equal(t, expected, got)
+	})
+	t.Run("false", func(t *testing.T) {
+		l2 := NewList()
+		l2.AddTail(1)
+		l2.AddTail(2)
+		l2.AddTail(33)
+		l2.AddTail(4)
+		l2.AddTail(5)
+
+		expected := false
+		got := l.CompareList(l2)
+		assert.Equal(t, expected, got)
+	})
+}
 
 func assertError(t *testing.T, got, want error) {
 	t.Helper()

@@ -239,3 +239,16 @@ func (l *List) CopyList() *List {
 	ll2.head = head
 	return ll2
 }
+
+func (l *List) CompareList(ll *List) bool {
+	return l.compareListUtil(l.head, ll.head)
+}
+func (l *List) compareListUtil(head1 *Node, head2 *Node) bool {
+	if head1 == nil && head2 == nil {
+		return true
+	} else if (head1 == nil) || (head2 == nil) || (head1.value != head2.value) {
+		return false
+	} else {
+		return l.compareListUtil(head1.next, head2.next)
+	}
+}
