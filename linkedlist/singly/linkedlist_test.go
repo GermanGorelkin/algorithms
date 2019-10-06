@@ -582,6 +582,48 @@ func TestList_FindLength(t *testing.T) {
 
 	})
 }
+func TestList_NthNodeFromBeginning(t *testing.T) {
+	l := NewList()
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddTail(4)
+	l.AddTail(5)
+
+	t.Run("[1, 2, 3, 4, 5], index=3", func(t *testing.T) {
+		expected := 3
+		got, err := l.NthNodeFromBeginning(3)
+		assert.Equal(t, nil, err)
+		assert.Equal(t, expected, got)
+
+	})
+	t.Run("[1, 2, 3, 4, 5], index=5", func(t *testing.T) {
+		expected := 5
+		got, err := l.NthNodeFromBeginning(5)
+		assert.Equal(t, nil, err)
+		assert.Equal(t, expected, got)
+
+	})
+	t.Run("[1, 2, 3, 4, 5], index=1", func(t *testing.T) {
+		expected := 1
+		got, err := l.NthNodeFromBeginning(1)
+		assert.Equal(t, nil, err)
+		assert.Equal(t, expected, got)
+
+	})
+	t.Run("[1, 2, 3, 4, 5], index=-1", func(t *testing.T) {
+		expected := 0
+		got, err := l.NthNodeFromBeginning(-1)
+		assert.Equal(t, ErrIndexOutOfRange, err)
+		assert.Equal(t, expected, got)
+	})
+	t.Run("[1, 2, 3, 4, 5], index=6", func(t *testing.T) {
+		expected := 0
+		got, err := l.NthNodeFromBeginning(6)
+		assert.Equal(t, ErrIndexOutOfRange, err)
+		assert.Equal(t, expected, got)
+	})
+}
 
 func assertError(t *testing.T, got, want error) {
 	t.Helper()

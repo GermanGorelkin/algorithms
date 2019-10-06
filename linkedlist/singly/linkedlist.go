@@ -7,6 +7,7 @@ import (
 )
 
 var ErrEmptyList = errors.New("list is empty")
+var ErrIndexOutOfRange = errors.New("index out of range")
 
 type Node struct {
 	value int
@@ -261,4 +262,18 @@ func (l *List) FindLength() int {
 		curr = curr.next
 	}
 	return count
+}
+
+func (l *List) NthNodeFromBeginning(index int) (int, error) {
+	if index > l.Size() || index < 1 {
+		return 0, ErrIndexOutOfRange
+	}
+
+	count := 0
+	curr := l.head
+	for curr != nil && count < index-1 {
+		count++
+		curr = curr.next
+	}
+	return curr.value, nil
 }
