@@ -904,6 +904,50 @@ func TestList_RemoveLoop(t *testing.T) {
 		assert.Equal(t, expected, got)
 	})
 }
+func TestList_FindIntersection(t *testing.T) {
+	t.Run("no intersection", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+		l.AddTail(4)
+		l.AddTail(5)
+
+		expected := l.String()
+		l.RemoveLoop()
+		got := l.String()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("intersection", func(t *testing.T) {
+		l1 := NewList()
+		l1.AddTail(1)
+		l1.AddTail(2)
+
+		l2 := NewList()
+		l2.AddTail(11)
+		l2.AddTail(22)
+		l2.AddNodeAtTail(Node{
+			value: 33,
+			next:  l1.head,
+		})
+
+		l3 := NewList()
+		l3.AddTail(111)
+		l3.AddTail(222)
+		l3.AddNodeAtTail(Node{
+			value: 333,
+			next:  l1.head,
+		})
+
+		//log.Println(l1.String())
+		//log.Println(l2.String())
+		//log.Println(l3.String())
+
+		expected := 1
+		got := l2.FindIntersection(l3.head)
+		assert.Equal(t, expected, got.value)
+	})
+}
 
 func getCircularLoopList() *List {
 	l := NewList()
