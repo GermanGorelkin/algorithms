@@ -317,3 +317,14 @@ func (l *List) LoopDetect() bool {
 	}
 	return false
 }
+
+func (l *List) ReverseListLoopDetect() bool {
+	tempHead := l.head
+	l.Reverse()
+	if tempHead == l.head {
+		l.Reverse()
+		return true
+	}
+	l.Reverse()
+	return false
+}

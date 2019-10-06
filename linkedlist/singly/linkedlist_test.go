@@ -720,8 +720,15 @@ func TestList_LoopDetect(t *testing.T) {
 		got := l.LoopDetect()
 		assert.Equal(t, expected, got)
 	})
+	t.Run("circular loop", func(t *testing.T) {
+		l := getCircularLoopList()
 
-	t.Run("loop. 6 nodes", func(t *testing.T) {
+		expected := true
+		got := l.LoopDetect()
+		assert.Equal(t, expected, got)
+	})
+
+	t.Run("loop", func(t *testing.T) {
 		l := getLoopList()
 
 		expected := true
@@ -729,8 +736,49 @@ func TestList_LoopDetect(t *testing.T) {
 		assert.Equal(t, expected, got)
 	})
 }
+func TestList_ReverseListLoopDetect(t *testing.T) {
+	t.Run("no loop", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+		l.AddTail(4)
+		l.AddTail(5)
 
-func getLoopList() *List {
+		expected := false
+		got := l.ReverseListLoopDetect()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("loop. 2 nodes", func(t *testing.T) {
+		l := NewList()
+		n1 := new(Node)
+		n2 := new(Node)
+		n1.next = n2
+		n2.next = n1
+		l.head = n1
+		l.count = 2
+
+		expected := true
+		got := l.ReverseListLoopDetect()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("circular loop", func(t *testing.T) {
+		l := getCircularLoopList()
+
+		expected := true
+		got := l.ReverseListLoopDetect()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("loop", func(t *testing.T) {
+		l := getLoopList()
+
+		expected := true
+		got := l.ReverseListLoopDetect()
+		assert.Equal(t, expected, got)
+	})
+}
+
+func getCircularLoopList() *List {
 	l := NewList()
 	l.AddTail(1)
 	l.AddTail(2)
@@ -741,6 +789,19 @@ func getLoopList() *List {
 		value: 6,
 		next:  l.head,
 	})
+	return l
+}
+func getLoopList() *List {
+	l := NewList()
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddNodeAtTail(Node{
+		value: 4,
+		next:  l.head,
+	})
+	l.AddHead(5)
+	l.AddHead(6)
 	return l
 }
 
