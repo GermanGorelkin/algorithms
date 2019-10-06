@@ -722,21 +722,26 @@ func TestList_LoopDetect(t *testing.T) {
 	})
 
 	t.Run("loop. 6 nodes", func(t *testing.T) {
-		l := NewList()
-		l.AddTail(1)
-		l.AddTail(2)
-		l.AddTail(3)
-		l.AddTail(4)
-		l.AddTail(5)
-		l.AddNodeAtTail(Node{
-			value: 6,
-			next:  l.head,
-		})
+		l := getLoopList()
 
 		expected := true
 		got := l.LoopDetect()
 		assert.Equal(t, expected, got)
 	})
+}
+
+func getLoopList() *List {
+	l := NewList()
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddTail(4)
+	l.AddTail(5)
+	l.AddNodeAtTail(Node{
+		value: 6,
+		next:  l.head,
+	})
+	return l
 }
 
 func assertError(t *testing.T, got, want error) {
