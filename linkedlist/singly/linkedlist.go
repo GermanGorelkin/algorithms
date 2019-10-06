@@ -344,3 +344,16 @@ func (l *List) LoopTypeDetect() int {
 	}
 	return 0
 }
+
+func (l *List) LoopPointDetect() *Node {
+	slowPtr := l.head
+	fastPtr := l.head
+	for fastPtr.next != nil && fastPtr.next.next != nil {
+		slowPtr = slowPtr.next
+		fastPtr = fastPtr.next.next
+		if slowPtr == fastPtr {
+			return slowPtr
+		}
+	}
+	return nil
+}
