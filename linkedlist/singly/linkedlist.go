@@ -328,3 +328,19 @@ func (l *List) ReverseListLoopDetect() bool {
 	l.Reverse()
 	return false
 }
+
+func (l *List) LoopTypeDetect() int {
+	slowPtr := l.head
+	fastPtr := l.head
+	for fastPtr.next != nil && fastPtr.next.next != nil {
+		if l.head == fastPtr.next || l.head == fastPtr.next.next {
+			return 2
+		}
+		slowPtr = slowPtr.next
+		fastPtr = fastPtr.next.next
+		if slowPtr == fastPtr {
+			return 1
+		}
+	}
+	return 0
+}
