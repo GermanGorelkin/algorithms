@@ -357,3 +357,26 @@ func (l *List) LoopPointDetect() *Node {
 	}
 	return nil
 }
+
+func (l *List) RemoveLoop() {
+	loopPoint := l.LoopPointDetect()
+	if loopPoint == nil {
+		return
+	}
+
+	firstPtr := l.head
+	if loopPoint == l.head {
+		for firstPtr.next != l.head {
+			firstPtr = firstPtr.next
+		}
+		firstPtr.next = nil
+		return
+	}
+
+	secondPtr := loopPoint
+	for firstPtr.next != secondPtr.next {
+		firstPtr = firstPtr.next
+		secondPtr = secondPtr.next
+	}
+	secondPtr.next = nil
+}
