@@ -145,6 +145,34 @@ func TestList_AddTail(t *testing.T) {
 		}
 	})
 }
+func TestList_AddNodeAtTail(t *testing.T) {
+	l := NewList()
+
+	l.AddNodeAtTail(Node{value: 1})
+	t.Run("count with one value", func(t *testing.T) {
+		expected := 1
+		got := l.count
+		assert.Equal(t, expected, got)
+	})
+	t.Run("String with one value", func(t *testing.T) {
+		expected := "[1]"
+		got := l.String()
+		assert.Equal(t, expected, got)
+	})
+
+	l.AddNodeAtTail(Node{value: 2})
+	l.AddNodeAtTail(Node{value: 3})
+	t.Run("count with 3 values", func(t *testing.T) {
+		expected := 3
+		got := l.count
+		assert.Equal(t, expected, got)
+	})
+	t.Run("String with 3 values", func(t *testing.T) {
+		expected := "[1, 2, 3]"
+		got := l.String()
+		assert.Equal(t, expected, got)
+	})
+}
 func TestList_SortedInsert(t *testing.T) {
 	l := NewList()
 
@@ -663,6 +691,50 @@ func TestList_NthNodeFromEnd(t *testing.T) {
 		expected := 0
 		got, err := l.NthNodeFromEnd(6)
 		assert.Equal(t, ErrIndexOutOfRange, err)
+		assert.Equal(t, expected, got)
+	})
+}
+func TestList_LoopDetect(t *testing.T) {
+	t.Run("no loop", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+		l.AddTail(4)
+		l.AddTail(5)
+
+		expected := false
+		got := l.LoopDetect()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("loop. 2 nodes", func(t *testing.T) {
+		l := NewList()
+		n1 := new(Node)
+		n2 := new(Node)
+		n1.next = n2
+		n2.next = n1
+		l.head = n1
+		l.count = 2
+
+		expected := true
+		got := l.LoopDetect()
+		assert.Equal(t, expected, got)
+	})
+
+	t.Run("loop. 6 nodes", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+		l.AddTail(4)
+		l.AddTail(5)
+		l.AddNodeAtTail(Node{
+			value: 6,
+			next:  l.head,
+		})
+
+		expected := true
+		got := l.LoopDetect()
 		assert.Equal(t, expected, got)
 	})
 }

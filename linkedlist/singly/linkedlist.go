@@ -54,6 +54,23 @@ func (l *List) AddTail(value int) {
 	l.count++
 }
 
+func (l *List) AddNodeAtTail(node Node) {
+	c := l.head
+
+	if c == nil {
+		l.head = &node
+		l.count++
+		return
+	}
+
+	for c.next != nil {
+		c = c.next
+	}
+
+	c.next = &node
+	l.count++
+}
+
 func (l *List) String() string {
 	b := bytes.Buffer{}
 	c := l.head
@@ -286,4 +303,17 @@ func (l *List) NthNodeFromEnd(index int) (int, error) {
 
 	startIndex := size - index + 1
 	return l.NthNodeFromBeginning(startIndex)
+}
+
+func (l *List) LoopDetect() bool {
+	slowPtr := l.head
+	fastPtr := l.head
+	for fastPtr.next != nil && fastPtr.next.next != nil {
+		slowPtr = slowPtr.next
+		fastPtr = fastPtr.next.next
+		if slowPtr == fastPtr {
+			return true
+		}
+	}
+	return false
 }
