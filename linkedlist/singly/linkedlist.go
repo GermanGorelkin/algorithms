@@ -277,3 +277,13 @@ func (l *List) NthNodeFromBeginning(index int) (int, error) {
 	}
 	return curr.value, nil
 }
+
+func (l *List) NthNodeFromEnd(index int) (int, error) {
+	size := l.Size()
+	if size != 0 && size < index {
+		return 0, ErrIndexOutOfRange
+	}
+
+	startIndex := size - index + 1
+	return l.NthNodeFromBeginning(startIndex)
+}
