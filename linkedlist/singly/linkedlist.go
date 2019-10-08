@@ -425,3 +425,41 @@ func (l *List) OddEvenList() {
 	}
 	odd.next = evenHead
 }
+
+func (l *List) IsPalindrome() bool {
+	if l.head == nil || l.head.next == nil {
+		return false
+	}
+
+	slow, fast := l.head, l.head.next.next
+
+	for fast != nil && fast.next != nil {
+		slow = slow.next
+		fast = fast.next.next
+	}
+
+	if fast != nil {
+		return false
+		//slow = slow.next
+	}
+
+	var prev, next *Node
+	for slow != nil {
+		next = slow.next
+		slow.next = prev
+		prev = slow
+		slow = next
+	}
+	slow = prev
+
+	fast = l.head
+	for slow != nil && fast != nil {
+		if slow.value != fast.value {
+			return false
+		}
+		slow = slow.next
+		fast = fast.next
+	}
+
+	return true
+}

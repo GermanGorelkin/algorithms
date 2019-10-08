@@ -961,6 +961,40 @@ func TestList_OddEvenList(t *testing.T) {
 	got := l.String()
 	assert.Equal(t, expected, got)
 }
+func TestList_IsPalindrome(t *testing.T) {
+	t.Run("[1, 2, 3, 4, 5]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+		l.AddTail(4)
+		l.AddTail(5)
+
+		expected := false
+		got := l.IsPalindrome()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("[1, 2]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+
+		expected := false
+		got := l.IsPalindrome()
+		assert.Equal(t, expected, got)
+	})
+	t.Run("[1, 2, 2, 1]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(2)
+		l.AddTail(1)
+
+		expected := true
+		got := l.IsPalindrome()
+		assert.Equal(t, expected, got)
+	})
+}
 
 func getCircularLoopList() *List {
 	l := NewList()
