@@ -413,3 +413,15 @@ func (l *List) FindIntersection(head2 *Node) *Node {
 	}
 	return head
 }
+
+func (l *List) OddEvenList() {
+	odd, even, evenHead := l.head, l.head.next, l.head.next
+
+	for even != nil && even.next != nil {
+		odd.next = even.next
+		odd = odd.next
+		even.next = odd.next
+		even = even.next
+	}
+	odd.next = evenHead
+}

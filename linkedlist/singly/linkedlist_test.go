@@ -948,6 +948,19 @@ func TestList_FindIntersection(t *testing.T) {
 		assert.Equal(t, expected, got.value)
 	})
 }
+func TestList_OddEvenList(t *testing.T) {
+	l := NewList()
+	l.AddTail(1)
+	l.AddTail(2)
+	l.AddTail(3)
+	l.AddTail(4)
+	l.AddTail(5)
+
+	expected := "[1, 3, 5, 2, 4]"
+	l.OddEvenList()
+	got := l.String()
+	assert.Equal(t, expected, got)
+}
 
 func getCircularLoopList() *List {
 	l := NewList()
