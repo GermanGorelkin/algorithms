@@ -346,13 +346,25 @@ func (l *List) LoopTypeDetect() int {
 }
 
 func (l *List) LoopPointDetect() *Node {
-	slowPtr := l.head
-	fastPtr := l.head
-	for fastPtr.next != nil && fastPtr.next.next != nil {
-		slowPtr = slowPtr.next
-		fastPtr = fastPtr.next.next
-		if slowPtr == fastPtr {
-			return slowPtr
+	slow := l.head
+	fast := l.head
+	for fast.next != nil && fast.next.next != nil {
+		slow = slow.next
+		fast = fast.next.next
+
+		if slow == fast {
+			if fast == l.head { // CircularLoop
+				for slow.next != fast {
+					slow = slow.next
+				}
+			} else {
+				fast = l.head
+				for fast.next != slow.next {
+					fast = fast.next
+					slow = slow.next
+				}
+			}
+			return slow
 		}
 	}
 	return nil
@@ -364,21 +376,7 @@ func (l *List) RemoveLoop() {
 		return
 	}
 
-	firstPtr := l.head
-	if loopPoint == l.head {
-		for firstPtr.next != l.head {
-			firstPtr = firstPtr.next
-		}
-		firstPtr.next = nil
-		return
-	}
-
-	secondPtr := loopPoint
-	for firstPtr.next != secondPtr.next {
-		firstPtr = firstPtr.next
-		secondPtr = secondPtr.next
-	}
-	secondPtr.next = nil
+	loopPoint.next = nil
 }
 
 func (l *List) FindIntersection(head2 *Node) *Node {

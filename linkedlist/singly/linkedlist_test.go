@@ -847,14 +847,14 @@ func TestList_LoopPointDetect(t *testing.T) {
 	t.Run("circular loop", func(t *testing.T) {
 		l := getCircularLoopList()
 
-		expected := 1
+		expected := 6
 		got := l.LoopPointDetect()
 		assert.Equal(t, expected, got.value)
 	})
 	t.Run("loop", func(t *testing.T) {
 		l := getLoopList()
 
-		expected := 3
+		expected := 4
 		got := l.LoopPointDetect()
 		assert.Equal(t, expected, got.value)
 	})
@@ -898,7 +898,7 @@ func TestList_RemoveLoop(t *testing.T) {
 	t.Run("loop", func(t *testing.T) {
 		l := getLoopList()
 
-		expected := "[6, 5, 1, 2, 3, 4]"
+		expected := "[0, 6, 5, 1, 2, 3, 4]"
 		l.RemoveLoop()
 		got := l.String()
 		assert.Equal(t, expected, got)
@@ -1020,6 +1020,7 @@ func getLoopList() *List {
 	})
 	l.AddHead(5)
 	l.AddHead(6)
+	l.AddHead(0)
 	return l
 }
 
