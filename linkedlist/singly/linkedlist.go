@@ -461,3 +461,34 @@ func (l *List) IsPalindrome() bool {
 
 	return true
 }
+
+func (l *List) AddTwoNumbers(l2 *Node) *Node {
+	head := &Node{}
+	cur := head
+	carry := 0
+
+	l1 := l.head
+
+	for l1 != nil || l2 != nil {
+		if l1 != nil {
+			carry += l1.value
+			l1 = l1.next
+		}
+		if l2 != nil {
+			carry += l2.value
+			l2 = l2.next
+		}
+
+		val := carry % 10
+		carry = carry / 10
+
+		cur.next = &Node{value: val}
+		cur = cur.next
+	}
+
+	if carry > 0 {
+		cur.next = &Node{value: carry}
+	}
+
+	return head.next
+}

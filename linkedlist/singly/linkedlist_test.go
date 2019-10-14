@@ -995,6 +995,48 @@ func TestList_IsPalindrome(t *testing.T) {
 		assert.Equal(t, expected, got)
 	})
 }
+func TestList_AddTwoNumbers(t *testing.T) {
+	t.Run("[2, 4, 3] + [5, 6, 4]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(2)
+		l.AddTail(4)
+		l.AddTail(3)
+
+		l2 := NewList()
+		l2.AddTail(5)
+		l2.AddTail(6)
+		l2.AddTail(4)
+
+		expected := "[7, 0, 8]"
+		got := NewList()
+		got.head = l.AddTwoNumbers(l2.head)
+		assert.Equal(t, expected, got.String())
+	})
+	t.Run("[1]+[2]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+
+		l2 := NewList()
+		l2.AddTail(2)
+
+		expected := "[3]"
+		got := NewList()
+		got.head = l.AddTwoNumbers(l2.head)
+		assert.Equal(t, expected, got.String())
+	})
+	t.Run("[1, 1] + []", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(1)
+
+		l2 := NewList()
+
+		expected := "[1, 1]"
+		got := NewList()
+		got.head = l.AddTwoNumbers(l2.head)
+		assert.Equal(t, expected, got.String())
+	})
+}
 
 func getCircularLoopList() *List {
 	l := NewList()
