@@ -37,6 +37,14 @@ func (l *List) String() string {
 	return b.String()
 }
 
+func (l *List) Size() int {
+	return l.count
+}
+
+func (l *List) IsEmpty() bool {
+	return l.count == 0
+}
+
 func (l *List) AddHead(val int) {
 	node := &Node{value: val}
 
@@ -47,6 +55,20 @@ func (l *List) AddHead(val int) {
 		node.next = l.head
 		l.head.prev = node
 		l.head = node
+	}
+
+	l.count++
+}
+
+func (l *List) AddTail(val int) {
+	node := &Node{value: val}
+
+	if l.tail == nil {
+		l.head = node
+		l.tail = node
+	} else {
+		l.tail.next = node
+		l.tail = node
 	}
 
 	l.count++
