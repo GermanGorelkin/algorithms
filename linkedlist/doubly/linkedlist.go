@@ -2,7 +2,13 @@ package doubly
 
 import (
 	"bytes"
+	"errors"
 	"strconv"
+)
+
+var (
+	ErrEmptyList       = errors.New("list is empty")
+	ErrIndexOutOfRange = errors.New("index out of range")
 )
 
 type List struct {
@@ -72,4 +78,23 @@ func (l *List) AddTail(val int) {
 	}
 
 	l.count++
+}
+
+func (l *List) RemoveHead() (int, error) {
+	if l.IsEmpty() {
+		return 0, ErrEmptyList
+	}
+
+	val := l.head.value
+	l.head = l.head.next
+
+	if l.head == nil {
+		l.tail = nil
+	} else {
+		l.head.prev = nil
+	}
+
+	l.count--
+
+	return val, nil
 }
