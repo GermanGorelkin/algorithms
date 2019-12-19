@@ -98,3 +98,21 @@ func (l *List) RemoveHead() (int, error) {
 
 	return val, nil
 }
+
+func (l *List) RemoveTail() (int, error) {
+	if l.IsEmpty() {
+		return 0, ErrEmptyList
+	}
+
+	val := l.tail.value
+	l.tail = l.tail.prev
+
+	if l.tail == nil {
+		l.head = nil
+	} else {
+		l.tail.next = nil
+	}
+
+	l.count--
+	return val, nil
+}
