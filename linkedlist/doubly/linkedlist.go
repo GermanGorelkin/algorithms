@@ -43,6 +43,22 @@ func (l *List) String() string {
 	return b.String()
 }
 
+func (l *List) ReverseString() string {
+	b := bytes.Buffer{}
+	curr := l.tail
+
+	b.WriteString("[")
+	for curr != nil {
+		b.WriteString(strconv.Itoa(curr.value))
+		curr = curr.prev
+		if curr != nil {
+			b.WriteString(", ")
+		}
+	}
+	b.WriteString("]")
+	return b.String()
+}
+
 func (l *List) Size() int {
 	return l.count
 }
@@ -74,10 +90,46 @@ func (l *List) AddTail(val int) {
 		l.tail = node
 	} else {
 		l.tail.next = node
+		node.prev = l.tail
 		l.tail = node
 	}
 
 	l.count++
+}
+
+func (l *List) AddAtIndex(val, index int) error {
+	if l.Size() < index {
+		return ErrIndexOutOfRange
+	}
+	if index < 0 {
+		index = 0
+	}
+
+	node := &Node{value: val}
+
+	// add at head
+	if index == 0 {
+		l.AddHead(val)
+		return nil
+	}
+	// add at tail
+	if l.Size() == index {
+		l.AddTail(val)
+		return nil
+	}
+
+	pred := l.head
+	for i := 0; i < index; i++ {
+		pred = pred.next
+	}
+
+	node.prev = pred.prev
+	pred.prev.next = node
+	pred.prev = node
+	node.next = pred
+	l.count++
+
+	return nil
 }
 
 func (l *List) RemoveHead() (int, error) {
