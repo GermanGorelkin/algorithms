@@ -23,6 +23,10 @@ type Node struct {
 	next  *Node
 }
 
+func (node *Node) Equals(other *Node) bool {
+	return node == other || node.value == other.value
+}
+
 func NewList() *List {
 	return &List{}
 }
@@ -168,3 +172,20 @@ func (l *List) RemoveTail() (int, error) {
 	l.count--
 	return val, nil
 }
+
+//func (l *List) RemoveNode(node *Node) bool{
+//	if l.head==nil{
+//		return false
+//	}
+//	curr := l.head
+//
+//	for curr!=nil{
+//		if node.Equals(curr){
+//
+//		}
+//
+//		curr = curr.next
+//	}
+//
+//	return true
+//}

@@ -5,6 +5,24 @@ import (
 	"testing"
 )
 
+func TestNode_Equals(t *testing.T) {
+	t.Run("nil", func(t *testing.T) {
+		var node *Node
+		var other *Node
+		assert.True(t, node.Equals(other))
+	})
+	t.Run("equal", func(t *testing.T) {
+		node := &Node{value: 123}
+		other := &Node{value: 123}
+		assert.True(t, node.Equals(other))
+	})
+	t.Run("not equal", func(t *testing.T) {
+		node := &Node{value: 123}
+		other := &Node{value: 321}
+		assert.False(t, node.Equals(other))
+	})
+}
+
 func TestList_AddHead(t *testing.T) {
 	l := NewList()
 
