@@ -9,6 +9,7 @@ import (
 var (
 	ErrEmptyList       = errors.New("list is empty")
 	ErrIndexOutOfRange = errors.New("index out of range")
+	ErrNodeNotFound    = errors.New("node not found")
 )
 
 type List struct {
@@ -196,4 +197,15 @@ func (l *List) RemoveNode(node *Node) bool {
 	}
 
 	return false
+}
+
+func (l *List) Find(value int) (*Node, error) {
+	curr := l.head
+	for curr != nil {
+		if curr.value == value {
+			return curr, nil
+		}
+		curr = curr.next
+	}
+	return nil, ErrNodeNotFound
 }

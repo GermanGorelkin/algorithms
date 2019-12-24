@@ -302,3 +302,30 @@ func TestList_RemoveNode(t *testing.T) {
 		assert.Equal(t, 2, l.Size())
 	})
 }
+func TestList_Find(t *testing.T) {
+	t.Run("fine 1 in []", func(t *testing.T) {
+		l := NewList()
+
+		node, err := l.Find(1)
+		assert.Nil(t, node)
+		assert.Error(t, err, ErrNodeNotFound)
+	})
+	t.Run("fine 1 in [1]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+
+		node, err := l.Find(1)
+		assert.Equal(t, 1, node.value)
+		assert.Nil(t, err)
+	})
+	t.Run("fine 3 in [1, 2, 3]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+
+		node, err := l.Find(3)
+		assert.Equal(t, 3, node.value)
+		assert.Nil(t, err)
+	})
+}
