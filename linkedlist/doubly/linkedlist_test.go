@@ -225,3 +225,80 @@ func TestList_RemoveTail(t *testing.T) {
 		assert.Equal(t, 2, l.Size())
 	})
 }
+func TestList_RemoveNode(t *testing.T) {
+	t.Run("[] remove 1", func(t *testing.T) {
+		l := NewList()
+		node := &Node{value: 1}
+
+		res := l.RemoveNode(node)
+
+		assert.False(t, res)
+		assert.Equal(t, "[]", l.String())
+		assert.Equal(t, "[]", l.ReverseString())
+		assert.Equal(t, 0, l.Size())
+	})
+	t.Run("[1] remove 0", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+
+		node := &Node{value: 0}
+		res := l.RemoveNode(node)
+
+		assert.False(t, res)
+		assert.Equal(t, "[1]", l.String())
+		assert.Equal(t, "[1]", l.ReverseString())
+		assert.Equal(t, 1, l.Size())
+	})
+	t.Run("[1] remove 1", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+
+		node := &Node{value: 1}
+		res := l.RemoveNode(node)
+
+		assert.True(t, res)
+		assert.Equal(t, "[]", l.String())
+		assert.Equal(t, "[]", l.ReverseString())
+		assert.Equal(t, 0, l.Size())
+	})
+	t.Run("[1, 2] remove 1", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+
+		node := &Node{value: 1}
+		res := l.RemoveNode(node)
+
+		assert.True(t, res)
+		assert.Equal(t, "[2]", l.String())
+		assert.Equal(t, "[2]", l.ReverseString())
+		assert.Equal(t, 1, l.Size())
+	})
+	t.Run("[1, 2] remove 2", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+
+		node := &Node{value: 2}
+		res := l.RemoveNode(node)
+
+		assert.True(t, res)
+		assert.Equal(t, "[1]", l.String())
+		assert.Equal(t, "[1]", l.ReverseString())
+		assert.Equal(t, 1, l.Size())
+	})
+	t.Run("[1, 2, 3] remove 2", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+
+		node := &Node{value: 2}
+		res := l.RemoveNode(node)
+
+		assert.True(t, res)
+		assert.Equal(t, "[1, 3]", l.String())
+		assert.Equal(t, "[3, 1]", l.ReverseString())
+		assert.Equal(t, 2, l.Size())
+	})
+}

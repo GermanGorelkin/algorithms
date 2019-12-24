@@ -173,19 +173,27 @@ func (l *List) RemoveTail() (int, error) {
 	return val, nil
 }
 
-//func (l *List) RemoveNode(node *Node) bool{
-//	if l.head==nil{
-//		return false
-//	}
-//	curr := l.head
-//
-//	for curr!=nil{
-//		if node.Equals(curr){
-//
-//		}
-//
-//		curr = curr.next
-//	}
-//
-//	return true
-//}
+func (l *List) RemoveNode(node *Node) bool {
+	if l.head == nil {
+		return false
+	}
+	curr := l.head
+
+	for curr != nil {
+		if node.Equals(curr) {
+			if curr.prev == nil { // curr is head
+				_, _ = l.RemoveHead()
+			} else if curr.next == nil { // curr is tail
+				_, _ = l.RemoveTail()
+			} else {
+				curr.prev.next = curr.next
+				curr.next.prev = curr.prev
+				l.count--
+			}
+			return true
+		}
+		curr = curr.next
+	}
+
+	return false
+}
