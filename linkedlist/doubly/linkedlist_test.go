@@ -329,3 +329,39 @@ func TestList_Find(t *testing.T) {
 		assert.Nil(t, err)
 	})
 }
+func TestList_ReverseList(t *testing.T) {
+	t.Run("[]", func(t *testing.T) {
+		l := NewList()
+
+		l.ReverseList()
+		assert.Equal(t, "[]", l.String())
+		assert.Equal(t, "[]", l.ReverseString())
+	})
+	t.Run("[1]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+
+		l.ReverseList()
+		assert.Equal(t, "[1]", l.String())
+		assert.Equal(t, "[1]", l.ReverseString())
+	})
+	t.Run("[1, 2]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+
+		l.ReverseList()
+		assert.Equal(t, "[2, 1]", l.String())
+		assert.Equal(t, "[1, 2]", l.ReverseString())
+	})
+	t.Run("[1, 2, 3]", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+
+		l.ReverseList()
+		assert.Equal(t, "[3, 2, 1]", l.String())
+		assert.Equal(t, "[1, 2, 3]", l.ReverseString())
+	})
+}

@@ -209,3 +209,13 @@ func (l *List) Find(value int) (*Node, error) {
 	}
 	return nil, ErrNodeNotFound
 }
+
+func (l *List) ReverseList() {
+	curr := l.head
+	l.head, l.tail = l.tail, l.head
+
+	for curr != nil {
+		curr.next, curr.prev = curr.prev, curr.next
+		curr = curr.prev
+	}
+}
