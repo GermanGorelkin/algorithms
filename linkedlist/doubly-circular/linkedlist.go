@@ -91,3 +91,18 @@ func (l *List) AddHead(val int) {
 	}
 	l.count++
 }
+
+func (l *List) AddTail(val int) {
+	node := &Node{value: val}
+
+	if l.tail == nil {
+		node.prev, node.next = node, node
+		l.head, l.tail = node, node
+	} else {
+		node.prev, node.next = l.tail, l.tail.next
+		l.head.prev = node
+		l.tail.next = node
+		l.tail = node
+	}
+	l.count++
+}

@@ -111,3 +111,36 @@ func TestList_AddHead(t *testing.T) {
 		assert.Equal(t, "[1, 2, 3, 4]", l.ReverseString())
 	})
 }
+
+func TestList_AddTail(t *testing.T) {
+	l := NewList()
+
+	t.Run("[1]", func(t *testing.T) {
+		l.AddTail(1)
+
+		assert.Equal(t, 1, l.Size())
+		assert.Equal(t, "[1]", l.String())
+		assert.Equal(t, "[1]", l.ReverseString())
+	})
+	t.Run("[1, 2]", func(t *testing.T) {
+		l.AddTail(2)
+
+		assert.Equal(t, 2, l.Size())
+		assert.Equal(t, "[1, 2]", l.String())
+		assert.Equal(t, "[2, 1]", l.ReverseString())
+	})
+	t.Run("[1, 2, 3]", func(t *testing.T) {
+		l.AddTail(3)
+
+		assert.Equal(t, 3, l.Size())
+		assert.Equal(t, "[1, 2, 3]", l.String())
+		assert.Equal(t, "[3, 2, 1]", l.ReverseString())
+	})
+	t.Run("[1, 2, 3, 4]", func(t *testing.T) {
+		l.AddTail(4)
+
+		assert.Equal(t, 4, l.Size())
+		assert.Equal(t, "[1, 2, 3, 4]", l.String())
+		assert.Equal(t, "[4, 3, 2, 1]", l.ReverseString())
+	})
+}
