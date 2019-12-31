@@ -1037,6 +1037,49 @@ func TestList_AddTwoNumbers(t *testing.T) {
 		assert.Equal(t, expected, got.String())
 	})
 }
+func TestList_RotateRight(t *testing.T) {
+	t.Run("[1, 2, 3, 4, 5], k=2", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+		l.AddTail(3)
+		l.AddTail(4)
+		l.AddTail(5)
+
+		l.RotateRight(2)
+
+		assert.Equal(t, "[4, 5, 1, 2, 3]", l.String())
+	})
+	t.Run("[0, 1, 2], k=4", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(0)
+		l.AddTail(1)
+		l.AddTail(2)
+
+		l.RotateRight(4)
+
+		assert.Equal(t, "[2, 0, 1]", l.String())
+	})
+	t.Run("[0, 1, 2], k=0", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(0)
+		l.AddTail(1)
+		l.AddTail(2)
+
+		l.RotateRight(0)
+
+		assert.Equal(t, "[0, 1, 2]", l.String())
+	})
+	t.Run("[1, 2], k=1", func(t *testing.T) {
+		l := NewList()
+		l.AddTail(1)
+		l.AddTail(2)
+
+		l.RotateRight(1)
+
+		assert.Equal(t, "[2, 1]", l.String())
+	})
+}
 
 func getCircularLoopList() *List {
 	l := NewList()

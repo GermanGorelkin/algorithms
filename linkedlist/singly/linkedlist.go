@@ -492,3 +492,24 @@ func (l *List) AddTwoNumbers(l2 *Node) *Node {
 
 	return head.next
 }
+
+func (l *List) RotateRight(k int) {
+	if l.IsEmpty() || k == 0 {
+		return
+	}
+
+	curr := l.head
+	for curr.next != nil {
+		curr = curr.next
+	}
+	curr.next = l.head
+
+	findIndex := l.count - k%l.count
+	for findIndex > 0 {
+		curr = curr.next
+		findIndex--
+	}
+
+	l.head = curr.next
+	curr.next = nil
+}
