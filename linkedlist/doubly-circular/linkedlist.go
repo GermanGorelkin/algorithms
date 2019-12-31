@@ -124,3 +124,21 @@ func (l *List) RemoveHead() (*Node, error) {
 
 	return head, nil
 }
+
+func (l *List) RemoveTail() (*Node, error) {
+	if l.IsEmpty() {
+		return nil, ErrEmptyList
+	}
+
+	tail := l.tail
+	if l.tail == l.tail.next { // 1 node
+		l.head, l.tail = nil, nil
+	} else {
+		l.head.prev = l.tail.prev
+		l.tail.prev.next = l.head
+		l.tail = l.tail.prev
+	}
+	l.count--
+
+	return tail, nil
+}
