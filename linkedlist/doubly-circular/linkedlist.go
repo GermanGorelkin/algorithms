@@ -106,3 +106,21 @@ func (l *List) AddTail(val int) {
 	}
 	l.count++
 }
+
+func (l *List) RemoveHead() (*Node, error) {
+	if l.IsEmpty() {
+		return nil, ErrEmptyList
+	}
+
+	head := l.head
+	if l.head == l.head.next { // 1 node
+		l.head, l.tail = nil, nil
+	} else {
+		l.tail.next = l.head.next
+		l.head.next.prev = l.tail
+		l.head = l.head.next
+	}
+	l.count--
+
+	return head, nil
+}
