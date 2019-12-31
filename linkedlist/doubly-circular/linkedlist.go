@@ -39,7 +39,6 @@ func (l *List) String() string {
 	b.WriteString("[")
 	for curr != nil {
 		b.WriteString(strconv.Itoa(curr.value))
-
 		curr = curr.next
 		if curr != l.head {
 			b.WriteString(", ")
@@ -79,5 +78,16 @@ func (l *List) IsEmpty() bool {
 }
 
 func (l *List) AddHead(val int) {
+	node := &Node{value: val}
 
+	if l.head == nil { // list is empty
+		node.prev, node.next = node, node
+		l.head, l.tail = node, node
+	} else {
+		node.prev, node.next = l.head.prev, l.head
+		l.head.prev = node
+		l.tail.next = node
+		l.head = node
+	}
+	l.count++
 }

@@ -78,3 +78,36 @@ func TestList_ReverseString(t *testing.T) {
 		assert.Equal(t, "[3, 2, 1]", l.ReverseString())
 	})
 }
+
+func TestList_AddHead(t *testing.T) {
+	l := NewList()
+
+	t.Run("[1]", func(t *testing.T) {
+		l.AddHead(1)
+
+		assert.Equal(t, 1, l.Size())
+		assert.Equal(t, "[1]", l.String())
+		assert.Equal(t, "[1]", l.ReverseString())
+	})
+	t.Run("[2, 1]", func(t *testing.T) {
+		l.AddHead(2)
+
+		assert.Equal(t, 2, l.Size())
+		assert.Equal(t, "[2, 1]", l.String())
+		assert.Equal(t, "[1, 2]", l.ReverseString())
+	})
+	t.Run("[3, 2, 1]", func(t *testing.T) {
+		l.AddHead(3)
+
+		assert.Equal(t, 3, l.Size())
+		assert.Equal(t, "[3, 2, 1]", l.String())
+		assert.Equal(t, "[1, 2, 3]", l.ReverseString())
+	})
+	t.Run("[4, 3, 2, 1]", func(t *testing.T) {
+		l.AddHead(4)
+
+		assert.Equal(t, 4, l.Size())
+		assert.Equal(t, "[4, 3, 2, 1]", l.String())
+		assert.Equal(t, "[1, 2, 3, 4]", l.ReverseString())
+	})
+}
