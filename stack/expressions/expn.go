@@ -11,6 +11,18 @@ A+(B*C)				+A*BC				ABC*+
 
 const operators = "+-*/%^"
 
+func InfixToPrefix(expn string) string {
+	return ""
+}
+
+func reverseString(s string) string {
+	r := []rune(s)
+	for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 {
+		r[i], r[j] = r[j], r[i]
+	}
+	return string(r)
+}
+
 func InfixToPostfix(expn string) string {
 	var out strings.Builder
 	stk := new(stack)
