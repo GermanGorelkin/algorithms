@@ -12,7 +12,24 @@ A+(B*C)				+A*BC				ABC*+
 const operators = "+-*/%^"
 
 func InfixToPrefix(expn string) string {
-	return ""
+	expn = reverseString(expn)
+	expn = replaceParentheses(expn)
+	expn = InfixToPostfix(expn)
+	expn = reverseString(expn)
+	return expn
+}
+
+func replaceParentheses(s string) string {
+	r := []rune(s)
+	for i := range r {
+		if r[i] == '(' {
+			r[i] = ')'
+		} else if r[i] == ')' {
+			r[i] = '('
+		}
+	}
+
+	return string(r)
 }
 
 func reverseString(s string) string {
