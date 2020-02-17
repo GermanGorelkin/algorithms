@@ -5,6 +5,45 @@ import (
 	"testing"
 )
 
+func TestInfixToPrefix(t *testing.T) {
+	tests := map[string]struct {
+		expn string
+		want string
+	}{
+		"A+B":              {expn: "A+B", want: "+AB"},
+		"A+B+C":            {expn: "A+B+C", want: "+A+BC"},
+		"(A+B)*C":          {expn: "(A+B)*C", want: "*+ABC"},
+		"A+B*C":            {expn: "A+B*C", want: "+A*BC"},
+		"A+(B*C)":          {expn: "A+(B*C)", want: "+A*BC"},
+		"x^y/(5*z)+10":     {expn: "x^y/(5*z)+10", want: "+/^xy*5z10"},
+		"x^y/(5*(z+z))+10": {expn: "x^y/(5*(z+z))+10", want: "+/^xy*5+zz10"},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			got := InfixToPrefix(tc.expn)
+			assert.Equal(t, tc.want, got)
+		})
+	}
+}
+
+func TestReplaceParentheses(t *testing.T) {
+	tests := map[string]struct {
+		input string
+		want  string
+	}{
+		"()":    {input: "()", want: ")("},
+		")(":    {input: ")(", want: "()"},
+		"1)2(3": {input: "1)2(3", want: "1(2)3"},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			assert.Equal(t, tc.want, replaceParentheses(tc.input))
+		})
+	}
+}
+
 func TestReverseString(t *testing.T) {
 	tests := map[string]struct {
 		input string
