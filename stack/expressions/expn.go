@@ -1,6 +1,10 @@
 package expn
 
-import "strings"
+import (
+	"github.com/germangorelkin/algorithms/stack/basic"
+	"strconv"
+	"strings"
+)
 
 /*
 Infix Expression	Prefix Expression	Postfix Expression
@@ -10,6 +14,36 @@ A+(B*C)				+A*BC				ABC*+
 */
 
 const operators = "+-*/%^"
+
+func PostfixEvaluate(tokens []string) int {
+	stk := basic.NewStack()
+	for _, tkn := range tokens {
+		value, err := strconv.Atoi(tkn)
+
+		//tkn is operand
+		if err == nil {
+			stk.Push(value)
+			continue
+		}
+
+		//tkn is operator
+		operand2, _ := stk.Pop()
+		operand1, _ := stk.Pop()
+		switch tkn {
+		case "+":
+			stk.Push(operand1 + operand2)
+		case "-":
+			stk.Push(operand1 - operand2)
+		case "*":
+			stk.Push(operand1 * operand2)
+		case "/":
+			stk.Push(operand1 / operand2)
+		}
+	}
+
+	res, _ := stk.Pop()
+	return res
+}
 
 func InfixToPrefix(expn string) string {
 	expn = reverseString(expn)

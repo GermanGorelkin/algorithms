@@ -5,6 +5,23 @@ import (
 	"testing"
 )
 
+func TestPostfixEvaluate(t *testing.T) {
+	tests := map[string]struct {
+		tokens []string
+		want   int
+	}{
+		"2 1 + 3 *":                     {tokens: []string{"2", "1", "+", "3", "*"}, want: 9},
+		"4 13 5 / +":                    {tokens: []string{"4", "13", "5", "/", "+"}, want: 6},
+		"10 6 9 3 + -11 * / * 17 + 5 *": {tokens: []string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}, want: 22},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			assert.Equal(t, tc.want, PostfixEvaluate(tc.tokens))
+		})
+	}
+}
+
 func TestInfixToPrefix(t *testing.T) {
 	tests := map[string]struct {
 		expn string
