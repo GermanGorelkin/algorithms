@@ -8,6 +8,7 @@ LeetCode
 
 | # | Title | Solution | Difficulty | Tags |
 |---| ----- | -------- | ---------- | -----|
+|14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Go](./array-string/longest-common-prefix/longest-common-prefix.go)|Easy| Array |
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Go](./array-string/implement-strstr/implement-strstr.go)|Easy| Array |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Go](./array-string/spiral-matrix/spiral-matrix.go)|Medium| Array |
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./array-string/plus-one/plus-one.go)|Easy| Array |
