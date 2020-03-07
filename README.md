@@ -22,6 +22,6 @@ LeetCode
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
-|704|[Binary Search](https://leetcode.com/problems/binary-search/) | [Go](./sort/binary-search/binary-search/binary-search.go)|Easy| Sort |
+|704|[Binary Search](https://leetcode.com/problems/binary-search/) | [Go](./binary-search/binary-search/binary-search.go)|Easy| Sort |
 |724|[Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | [Go](./array-string/find-pivot-index/find-pivot-index.go)|Easy| Array |
 |747|[Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | [Go](./array-string/largest-number-at-least-twice-of-others/largest-number-at-least-twice-of-others.go)|Easy| Array |
