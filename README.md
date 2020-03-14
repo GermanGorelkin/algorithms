@@ -20,6 +20,7 @@ LeetCode
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/) | [Go](./array-string/rotate-array/rotate-array.go)|Easy| Array |
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Go](./array-string/minimum-size-subarray-sum/minimum-size-subarray-sum.go)|Medium| Array |
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [Go](./array-string/reverse-string/reverse-string.go)|Easy| Array |
+|374|[Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | [Go](./binary-search/guess-number-higher-or-lower)|Easy| Array |
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
