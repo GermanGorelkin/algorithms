@@ -24,19 +24,89 @@ The value of each element in nums will be in the range [-9999, 9999].
 
 package binary_search
 
+/*
+Distinguishing Syntax:
+	Initial Condition: left = 0, right = length-1
+	Termination: left > right
+	Searching Left: right = mid-1
+	Searching Right: left = mid+1
+*/
 func search(nums []int, target int) int {
-	left, right, pivot := 0, len(nums)-1, 0
+	lo, hi := 0, len(nums)-1
 
-	for left <= right {
-		pivot = left + (right-left)/2
-		if nums[pivot] == target {
-			return pivot
-		} else if nums[pivot] > target {
-			right = pivot - 1
+	for lo <= hi {
+		mid := lo + (hi-lo)/2
+		if nums[mid] == target {
+			return mid
+		} else if nums[mid] > target {
+			hi = mid - 1
 		} else {
-			left = pivot + 1
+			lo = mid + 1
 		}
 	}
 
+	return -1
+}
+
+/*
+It is used to search for an element or condition which requires accessing the current index and
+its immediate right neighbor's index in the array.
+
+Distinguishing Syntax:
+	Initial Condition: left = 0, right = length
+	Termination: left == right
+	Searching Left: right = mid
+	Searching Right: left = mid+1
+*/
+func search2(nums []int, target int) int {
+	lo, hi := 0, len(nums)
+
+	for lo < hi {
+		mid := lo + (hi-lo)/2
+		if nums[mid] == target {
+			return mid
+		} else if nums[mid] > target {
+			hi = mid
+		} else {
+			lo = mid + 1
+		}
+	}
+
+	if lo != len(nums) && nums[lo] == target {
+		return lo
+	}
+	return -1
+}
+
+/*
+It is used to search for an element or condition which requires accessing the current index
+and its immediate left and right neighbor's index in the array.
+
+Distinguishing Syntax:
+	Initial Condition: left = 0, right = length-1
+	Termination: left + 1 == right
+	Searching Left: right = mid
+	Searching Right: left = mid
+*/
+func search3(nums []int, target int) int {
+	lo, hi := 0, len(nums)-1
+
+	for lo+1 < hi {
+		mid := lo + (hi-lo)/2
+		if nums[mid] == target {
+			return mid
+		} else if nums[mid] > target {
+			hi = mid
+		} else {
+			lo = mid
+		}
+	}
+
+	if nums[lo] == target {
+		return lo
+	}
+	if nums[hi] == target {
+		return hi
+	}
 	return -1
 }
