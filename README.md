@@ -11,6 +11,7 @@ LeetCode
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Go](./array-string/longest-common-prefix/longest-common-prefix.go)|Easy| Array |
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [Go](./array-string/remove-element/remove-element.go)|Easy| Array |
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Go](./array-string/implement-strstr/implement-strstr.go)|Easy| Array |
+|33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Go](./binary-search/search-in-rotated-sorted-array/search-in-rotated-sorted-array.go)|Medium| Binary Search |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Go](./array-string/spiral-matrix/spiral-matrix.go)|Medium| Array |
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./array-string/plus-one/plus-one.go)|Easy| Array |
 |67|[Add Binary](https://leetcode.com/problems/add-binary/) | [Go](./array-string/add-binary/add-binary.go)|Easy| Array |

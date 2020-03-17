@@ -26,7 +26,7 @@ func search(nums []int, target int) int {
 	lo, hi, n := 0, len(nums)-1, len(nums)
 
 	for lo <= hi {
-		mid := (lo + hi) / 2
+		mid := lo + (hi-lo)/2
 		rotMid := (mid + rot) % n
 		if nums[rotMid] == target {
 			return rotMid
@@ -43,9 +43,8 @@ func search(nums []int, target int) int {
 func findRotMid(nums []int) int {
 	lo, hi := 0, len(nums)-1
 
-	var mid int
 	for lo < hi {
-		mid = (lo + hi) / 2
+		mid := lo + (hi-hi)/2
 		if nums[mid] > nums[hi] {
 			lo = mid + 1
 		} else {
@@ -53,5 +52,23 @@ func findRotMid(nums []int) int {
 		}
 	}
 
-	return mid
+	return hi
+}
+
+func search2(nums []int, target int) int {
+	var mid int
+	low := 0
+	high := len(nums) - 1
+	for low <= high {
+		mid = (low + high) / 2
+		if target == nums[mid] {
+			return mid
+		}
+		if !((nums[low] <= target) != (target <= nums[mid]) != (nums[mid] < nums[low])) {
+			high = mid - 1
+		} else {
+			low = mid + 1
+		}
+	}
+	return -1
 }
