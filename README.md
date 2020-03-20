@@ -18,6 +18,7 @@ LeetCode
 |67|[Add Binary](https://leetcode.com/problems/add-binary/) | [Go](./array-string/add-binary/add-binary.go)|Easy| Array |
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx/) | [Go](./binary-search/sqrtx/sqrtx.go)|Easy| Binary Search |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
+|144|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | [Go](./binary-tree/binary-tree-preorder-traversal/binary-tree-preorder-traversal.go)|Medium| Tree |
 |153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [Go](./binary-search/find-minimum-in-rotated-sorted-array/find-minimum-in-rotated-sorted-array.go)|Medium| Binary Search |
 |162|[Find Peak Element](https://leetcode.com/problems/find-peak-element/) | [Go](./binary-search/find-peak-element/find-peak-element.go)|Medium| Binary Search |
 |167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Go](./array-string/two-sum-ii-input-array-is-sorted/two-sum-ii-input-array-is-sorted.go)|Easy| Array |
