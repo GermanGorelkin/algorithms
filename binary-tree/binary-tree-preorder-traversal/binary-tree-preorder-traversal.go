@@ -33,3 +33,40 @@ func preorderTraversal(root *TreeNode) (s []int) {
 
 	return s
 }
+
+func preorderTraversal_iteratively(root *TreeNode) (s []int) {
+	if root == nil {
+		return s
+	}
+	st := &stack{}
+	st.push(root)
+
+	for !st.isEmpty() {
+		cur := st.pop()
+		s = append(s, cur.Val)
+		if cur.Right != nil {
+			st.push(cur.Right)
+		}
+		if cur.Left != nil {
+			st.push(cur.Left)
+		}
+	}
+
+	return s
+}
+
+type stack struct {
+	s []*TreeNode
+}
+
+func (s *stack) push(val *TreeNode) {
+	s.s = append(s.s, val)
+}
+func (s *stack) pop() *TreeNode {
+	val := s.s[len(s.s)-1]
+	s.s = s.s[:len(s.s)-1]
+	return val
+}
+func (s *stack) isEmpty() bool {
+	return len(s.s) == 0
+}
