@@ -43,6 +43,28 @@ func inorderTraversal_iteratively(root *TreeNode) (s []int) {
 	cur := root
 
 	for cur != nil || !st.isEmpty() {
+		if cur != nil {
+			st.push(cur)
+			cur = cur.Left
+		} else {
+			cur = st.pop()
+			s = append(s, cur.Val)
+			cur = cur.Right
+		}
+	}
+
+	return s
+}
+
+func inorderTraversal_iteratively2(root *TreeNode) (s []int) {
+	if root == nil {
+		return s
+	}
+
+	st := &stack{}
+	cur := root
+
+	for cur != nil || !st.isEmpty() {
 		for cur != nil {
 			st.push(cur)
 			cur = cur.Left
