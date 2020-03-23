@@ -39,6 +39,27 @@ func preorderTraversal_iteratively(root *TreeNode) (s []int) {
 		return s
 	}
 	st := &stack{}
+	cur := root
+
+	for cur != nil || !st.isEmpty() {
+		if cur != nil {
+			st.push(cur)
+			s = append(s, cur.Val)
+			cur = cur.Left
+		} else {
+			cur = st.pop()
+			cur = cur.Right
+		}
+	}
+
+	return s
+}
+
+func preorderTraversal_iteratively2(root *TreeNode) (s []int) {
+	if root == nil {
+		return s
+	}
+	st := &stack{}
 	st.push(root)
 
 	for !st.isEmpty() {
