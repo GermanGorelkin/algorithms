@@ -23,6 +23,9 @@ Output: 3
 
 package number_of_islands
 
+//-----------------BFS
+var offsets = [5]int{0, 1, 0, -1, 0}
+
 func numIslands(grid [][]byte) int {
 	if len(grid) == 0 {
 		return 0
@@ -48,9 +51,6 @@ func numIslands(grid [][]byte) int {
 }
 
 func bfs(start point, grid [][]byte, visited map[point]struct{}) {
-	h := len(grid)
-	w := len(grid[0])
-
 	q := queue{}
 	visited[start] = struct{}{}
 	q.enQueue(start)
@@ -58,26 +58,17 @@ func bfs(start point, grid [][]byte, visited map[point]struct{}) {
 	for !q.isEmpty() {
 		p := q.deQueue()
 
-		var next point
-
-		next = point{i: p.i - 1, j: p.j}
-		if next.i >= 0 && grid[next.i][next.j] == 1 && !hasVisited(next, visited) {
-			visited[next] = struct{}{}
-			q.enQueue(next)
-		}
-		next = point{i: p.i + 1, j: p.j}
-		if next.i < h && grid[next.i][next.j] == 1 && !hasVisited(next, visited) {
-			visited[next] = struct{}{}
-			q.enQueue(next)
-		}
-
-		next = point{i: p.i, j: p.j - 1}
-		if next.j >= 0 && grid[next.i][next.j] == 1 && !hasVisited(next, visited) {
-			visited[next] = struct{}{}
-			q.enQueue(next)
-		}
-		next = point{i: p.i, j: p.j + 1}
-		if next.j < w && grid[next.i][next.j] == 1 && !hasVisited(next, visited) {
+		for i := 0; i < 4; i++ {
+			next := point{
+				i: p.i + offsets[i],
+				j: p.j + offsets[i+1],
+			}
+			if next.i < 0 || next.i >= len(grid) || next.j < 0 || next.j >= len(grid[0]) {
+				continue
+			}
+			if hasVisited(next, visited) || grid[next.i][next.j] == 0 {
+				continue
+			}
 			visited[next] = struct{}{}
 			q.enQueue(next)
 		}
@@ -109,7 +100,7 @@ func (q *queue) isEmpty() bool {
 	return len(q.data) == 0
 }
 
-//---------V2
+//---------DFS
 
 func numIslands2(grid [][]byte) int {
 	if len(grid) == 0 {
