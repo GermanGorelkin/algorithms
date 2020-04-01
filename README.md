@@ -19,6 +19,7 @@ LeetCode
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx/) | [Go](./binary-search/sqrtx/sqrtx.go)|Easy| Binary Search |
 |94|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [Go](./binary-tree/binary-tree-inorder-traversal/binary-tree-inorder-traversal.go)|Medium| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
+|136|[Single Number](https://leetcode.com/problems/single-number/) | [Go](./array-string/single-number/single-number.go)|Easy| Array |
 |144|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | [Go](./binary-tree/binary-tree-preorder-traversal/binary-tree-preorder-traversal.go)|Medium| Tree |
 |145|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | [Go](./binary-tree/binary-tree-postorder-traversal/binary-tree-postorder-traversal.go)|Hard| Tree |
 |153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [Go](./binary-search/find-minimum-in-rotated-sorted-array/find-minimum-in-rotated-sorted-array.go)|Medium| Binary Search |
