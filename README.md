@@ -27,6 +27,7 @@ LeetCode
 |167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Go](./array-string/two-sum-ii-input-array-is-sorted/two-sum-ii-input-array-is-sorted.go)|Easy| Array |
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/) | [Go](./array-string/rotate-array/rotate-array.go)|Easy| Array |
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Go](./graph/number-of-islands/number-of-islands.go)|Medium| Graph |
+|202|[Happy Number](https://leetcode.com/problems/happy-number/) | [Go](./hash-table/happy-number/happy-number.go)|Easy| Hash Table |
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Go](./array-string/minimum-size-subarray-sum/minimum-size-subarray-sum.go)|Medium| Array |
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [Go](./array-string/reverse-string/reverse-string.go)|Easy| Array |
