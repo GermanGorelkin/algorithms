@@ -44,6 +44,8 @@ LeetCode
 |747|[Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | [Go](./array-string/largest-number-at-least-twice-of-others/largest-number-at-least-twice-of-others.go)|Easy| Array |
 |752|[Open the Lock](https://leetcode.com/problems/open-the-lock/) | [Go](./graph/open-the-lock/open-the-lock.go)|Medium| Graph |
 
+[Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./array-string/counting-elements/counting-elements.go) | Easy | Array |
+
 Graph
 ========
 [Breadth-first Search](./graph/BFS/bfs.go)
