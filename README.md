@@ -39,6 +39,7 @@ LeetCode
 |374|[Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | [Go](./binary-search/guess-number-higher-or-lower)|Easy| Binary Search |
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
+|525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./array-string/contiguous-array/contiguous-array.go)|Medium| Array |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
 |704|[Binary Search](https://leetcode.com/problems/binary-search/) | [Go](./binary-search/binary-search/binary-search.go)|Easy| Binary Search |
 |724|[Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | [Go](./array-string/find-pivot-index/find-pivot-index.go)|Easy| Array |
