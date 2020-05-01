@@ -24,6 +24,29 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func levelOrderDFS(root *TreeNode) [][]int {
+	res := make([][]int, 0)
+	dfs(root, &res, 0)
+
+	return res
+}
+
+func dfs(root *TreeNode, res *[][]int, lvl int) {
+	if root == nil {
+		return
+	}
+
+	if lvl >= len(*res) {
+		*res = append(*res, []int{})
+	}
+
+	(*res)[lvl] = append((*res)[lvl], root.Val)
+	dfs(root.Left, res, lvl+1)
+	dfs(root.Right, res, lvl+1)
+}
+
+//------------
+
 func levelOrder(root *TreeNode) [][]int {
 	res := make([][]int, 0)
 	if root == nil {
