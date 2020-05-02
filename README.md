@@ -19,6 +19,7 @@ LeetCode
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./array-string/plus-one/plus-one.go)|Easy| Array |
 |67|[Add Binary](https://leetcode.com/problems/add-binary/) | [Go](./array-string/add-binary/add-binary.go)|Easy| Array |
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx/) | [Go](./binary-search/sqrtx/sqrtx.go)|Easy| Binary Search |
+|88|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Go](./array-string/merge-sorted-array/merge-sorted-array.go)|Easy| Array |
 |94|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [Go](./binary-tree/binary-tree-inorder-traversal/binary-tree-inorder-traversal.go)|Medium| Tree |
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Go](./binary-tree/binary-tree-level-order-traversal/binary-tree-level-order-traversal.go)|Medium| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
