@@ -21,6 +21,7 @@ LeetCode
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx/) | [Go](./binary-search/sqrtx/sqrtx.go)|Easy| Binary Search |
 |88|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | [Go](./array-string/merge-sorted-array/merge-sorted-array.go)|Easy| Array |
 |94|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [Go](./binary-tree/binary-tree-inorder-traversal/binary-tree-inorder-traversal.go)|Medium| Tree |
+|101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [Go](./binary-tree/maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.go)|Easy| Tree |
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Go](./binary-tree/binary-tree-level-order-traversal/binary-tree-level-order-traversal.go)|Medium| Tree |
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Go](./binary-tree/maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.go)|Easy| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
