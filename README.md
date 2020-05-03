@@ -43,6 +43,7 @@ LeetCode
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [Go](./array-string/reverse-string/reverse-string.go)|Easy| Array |
 |374|[Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | [Go](./binary-search/guess-number-higher-or-lower)|Easy| Binary Search |
 |383|[Ransom Note](https://leetcode.com/problems/ransom-note/) | [Go](./array-string/ransom-note/ransom-note.go)|Easy| Array |
+|384|[Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/) | [Go](./array-string/shuffle-an-array/shuffle-an-array.go)|Medium| Array |
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./array-string/contiguous-array/contiguous-array.go)|Medium| Array |
