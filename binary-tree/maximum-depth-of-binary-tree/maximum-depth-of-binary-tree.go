@@ -50,3 +50,16 @@ func maxDepthTopDown(node *TreeNode, depth int) {
 }
 
 // "Bottom-Up"
+
+func maxDepth_BottonUp(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	ldepth := maxDepth_BottonUp(root.Left)
+	rdepth := maxDepth_BottonUp(root.Right)
+
+	if ldepth > rdepth {
+		return ldepth + 1
+	}
+	return rdepth + 1
+}
