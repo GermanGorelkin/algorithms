@@ -24,6 +24,7 @@ LeetCode
 |101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [Go](./binary-tree/maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.go)|Easy| Tree |
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Go](./binary-tree/binary-tree-level-order-traversal/binary-tree-level-order-traversal.go)|Medium| Tree |
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Go](./binary-tree/maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.go)|Easy| Tree |
+|112|[Path Sum](https://leetcode.com/problems/path-sum/) | [Go](./binary-tree/path-sum/path-sum.go)|Easy| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Go](./array-string/best-time-to-buy-and-sell-stock/best-time-to-buy-and-sell-stock.go)|Easy| Array |
 |122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Go](./array-string/best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.go)|Easy| Array |
