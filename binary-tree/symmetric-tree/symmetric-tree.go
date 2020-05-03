@@ -49,3 +49,50 @@ func dfs(l *TreeNode, r *TreeNode) bool {
 	}
 	return dfs(l.Left, r.Right) && dfs(l.Right, r.Left)
 }
+
+func isSymmetric_BFS(root *TreeNode) bool {
+	if root == nil {
+		return true
+	}
+	q := &queue{}
+	q.enQueue(root)
+	q.enQueue(root)
+
+	for !q.isEmpty() {
+		n1 := q.deQueue()
+		n2 := q.deQueue()
+
+		if n1 == nil && n2 == nil {
+			continue
+		}
+		if n1 == nil || n2 == nil {
+			return false
+		}
+		if n1.Val != n2.Val {
+			return false
+		}
+
+		q.enQueue(n1.Left)
+		q.enQueue(n2.Right)
+		q.enQueue(n1.Right)
+		q.enQueue(n2.Left)
+	}
+
+	return true
+}
+
+type queue struct {
+	data []*TreeNode
+}
+
+func (q *queue) enQueue(v *TreeNode) {
+	q.data = append(q.data, v)
+}
+func (q *queue) deQueue() *TreeNode {
+	v := q.data[0]
+	q.data = q.data[1:]
+	return v
+}
+func (q *queue) isEmpty() bool {
+	return len(q.data) == 0
+}
