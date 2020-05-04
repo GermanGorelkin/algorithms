@@ -45,6 +45,7 @@ LeetCode
 |383|[Ransom Note](https://leetcode.com/problems/ransom-note/) | [Go](./array-string/ransom-note/ransom-note.go)|Easy| Array |
 |384|[Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/) | [Go](./array-string/shuffle-an-array/shuffle-an-array.go)|Medium| Array |
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
+|476|[Number Complement](https://leetcode.com/problems/number-complement/) | [Go](./bit-manipulation/number-complement/number-complement.go)|Easy| Bit manipulation |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./array-string/contiguous-array/contiguous-array.go)|Medium| Array |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
