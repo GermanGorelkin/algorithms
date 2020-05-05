@@ -174,4 +174,23 @@ func Test_isValidBST_inorder(t *testing.T) {
 
 		assert.False(t, isValidBST_inorder(n10))
 	})
+
+	t.Run("[3,2,4,1]", func(t *testing.T) {
+		/*
+			    3
+			   / \
+			  2   4
+			 /
+			1
+		*/
+		n3 := &TreeNode{Val: 3}
+		n2 := &TreeNode{Val: 2}
+		n1 := &TreeNode{Val: 1}
+		n4 := &TreeNode{Val: 4}
+
+		n3.Left, n3.Right = n2, n4
+		n2.Left = n1
+
+		assert.True(t, isValidBST_inorder(n3))
+	})
 }

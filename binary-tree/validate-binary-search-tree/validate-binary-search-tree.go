@@ -126,26 +126,21 @@ func isValidBST_inorder(root *TreeNode) bool {
 		return true
 	}
 	st := &stack{}
-	n := root
 	val := MinInt
-	st.push(n)
 
-	for !st.isEmpty() {
-		if n.Left != nil {
-			n = n.Left
-			st.push(n)
-			continue
+	for !st.isEmpty() || root != nil {
+		for root != nil {
+			st.push(root)
+			root = root.Left
 		}
 
-		n = st.pop()
-		if val >= n.Val {
+		root = st.pop()
+		if val >= root.Val {
 			return false
 		}
-		val = n.Val
-		if n.Right != nil {
-			n = n.Right
-			st.push(n)
-		}
+		val = root.Val
+
+		root = root.Right
 	}
 	return true
 }
