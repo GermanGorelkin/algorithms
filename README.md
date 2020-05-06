@@ -35,6 +35,7 @@ LeetCode
 |153|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [Go](./binary-search/find-minimum-in-rotated-sorted-array/find-minimum-in-rotated-sorted-array.go)|Medium| Binary Search |
 |162|[Find Peak Element](https://leetcode.com/problems/find-peak-element/) | [Go](./binary-search/find-peak-element/find-peak-element.go)|Medium| Binary Search |
 |167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Go](./array-string/two-sum-ii-input-array-is-sorted/two-sum-ii-input-array-is-sorted.go)|Easy| Array |
+|169|[Majority Element](https://leetcode.com/problems/majority-element/) | [Go](./array-string/majority-element/majority-element.go)|Easy| Array |
 |173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [Go](./binary-tree/binary-search-tree-iterator/binary-search-tree-iterator.go)|Medium| Tree |
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/) | [Go](./array-string/rotate-array/rotate-array.go)|Easy| Array |
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Go](./graph/number-of-islands/number-of-islands.go)|Medium| Graph |
