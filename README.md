@@ -54,6 +54,7 @@ LeetCode
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./array-string/contiguous-array/contiguous-array.go)|Medium| Array |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
 |700|[Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | [Go](./binary-tree/search-in-a-binary-search-tree/search-in-a-binary-search-tree.go)|Easy| Tree |
+|701|[Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | [Go](./binary-tree/insert-into-a-binary-search-tree/insert-into-a-binary-search-tree.go)|Medium| Tree |
 |704|[Binary Search](https://leetcode.com/problems/binary-search/) | [Go](./binary-search/binary-search/binary-search.go)|Easy| Binary Search |
 |724|[Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | [Go](./array-string/find-pivot-index/find-pivot-index.go)|Easy| Array |
 |747|[Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | [Go](./array-string/largest-number-at-least-twice-of-others/largest-number-at-least-twice-of-others.go)|Easy| Array |
