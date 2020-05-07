@@ -60,6 +60,7 @@ LeetCode
 |747|[Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | [Go](./array-string/largest-number-at-least-twice-of-others/largest-number-at-least-twice-of-others.go)|Easy| Array |
 |752|[Open the Lock](https://leetcode.com/problems/open-the-lock/) | [Go](./graph/open-the-lock/open-the-lock.go)|Medium| Graph |
 |771|[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | [Go](./array-string/jewels-and-stones/jewels-and-stones.go)|Easy| Array |
+|993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Go](./binary-tree/cousins-in-binary-tree/cousins-in-binary-tree.go)|Easy| Tree |
 
 [Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./array-string/counting-elements/counting-elements.go) | Easy | Array |
 
