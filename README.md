@@ -63,6 +63,7 @@ LeetCode
 |752|[Open the Lock](https://leetcode.com/problems/open-the-lock/) | [Go](./graph/open-the-lock/open-the-lock.go)|Medium| Graph |
 |771|[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | [Go](./array-string/jewels-and-stones/jewels-and-stones.go)|Easy| Array |
 |993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Go](./binary-tree/cousins-in-binary-tree/cousins-in-binary-tree.go)|Easy| Tree |
+|997|[Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | [Go](./graph/find-the-town-judge/find-the-town-judge.go)|Easy| Graph |
 |1232|[Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | [Go](./array-string/check-if-it-is-a-straight-line/check-if-it-is-a-straight-line.go)|Easy| Array |
 
 [Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./array-string/counting-elements/counting-elements.go) | Easy | Array |
