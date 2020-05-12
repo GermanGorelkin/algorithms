@@ -54,6 +54,7 @@ LeetCode
 |476|[Number Complement](https://leetcode.com/problems/number-complement/) | [Go](./bit-manipulation/number-complement/number-complement.go)|Easy| Bit manipulation |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./array-string/contiguous-array/contiguous-array.go)|Medium| Array |
+|540|[Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | [Go](./binary-search/single-element-in-a-sorted-array/single-element-in-a-sorted-array.go)|Medium| Binary Search |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
 |700|[Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | [Go](./binary-tree/search-in-a-binary-search-tree/search-in-a-binary-search-tree.go)|Easy| Tree |
 |701|[Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | [Go](./binary-tree/insert-into-a-binary-search-tree/insert-into-a-binary-search-tree.go)|Medium| Tree |
