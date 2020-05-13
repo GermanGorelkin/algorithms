@@ -49,6 +49,7 @@ LeetCode
 |383|[Ransom Note](https://leetcode.com/problems/ransom-note/) | [Go](./array-string/ransom-note/ransom-note.go)|Easy| Array |
 |384|[Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/) | [Go](./array-string/shuffle-an-array/shuffle-an-array.go)|Medium| Array |
 |387|[First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Go](./array-string/first-unique-character-in-a-string/first-unique-character-in-a-string.go)|Easy| Array |
+|402|[Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | [Go](./stack/remove-k-digits/remove-k-digits.go)|Medium| Stack |
 |450|[Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | [Go](./binary-tree/delete-node-in-a-bst/delete-node-in-a-bst.go)|Medium| Tree |
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |476|[Number Complement](https://leetcode.com/problems/number-complement/) | [Go](./bit-manipulation/number-complement/number-complement.go)|Easy| Bit manipulation |
