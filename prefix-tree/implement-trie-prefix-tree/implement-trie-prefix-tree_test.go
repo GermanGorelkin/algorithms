@@ -5,6 +5,37 @@ import (
 	"testing"
 )
 
+func Test_StartsWith(t *testing.T) {
+	t.Run("1", func(t *testing.T) {
+		trie := Constructor()
+
+		assert.False(t, trie.StartsWith("a"))
+
+		trie.Insert("b")
+		assert.True(t, trie.StartsWith("b"))
+		assert.False(t, trie.StartsWith("a"))
+
+		trie.Insert("bb")
+		assert.True(t, trie.StartsWith("b"))
+		assert.True(t, trie.StartsWith("bb"))
+
+		assert.False(t, trie.StartsWith("a"))
+		assert.False(t, trie.StartsWith("bbb"))
+		assert.False(t, trie.StartsWith("bba"))
+
+		trie.Insert("apple")
+		assert.True(t, trie.StartsWith("a"))
+		assert.True(t, trie.StartsWith("ap"))
+		assert.True(t, trie.StartsWith("app"))
+		assert.True(t, trie.StartsWith("appl"))
+		assert.True(t, trie.StartsWith("apple"))
+
+		assert.False(t, trie.StartsWith("appleq"))
+		assert.False(t, trie.StartsWith("appp"))
+
+	})
+}
+
 func Test_Insert(t *testing.T) {
 	t.Run("1", func(t *testing.T) {
 		trie := Constructor()

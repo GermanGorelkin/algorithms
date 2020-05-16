@@ -76,5 +76,14 @@ func (this *Trie) Search(word string) bool {
 
 /** Returns if there is any word in the trie that starts with the given prefix. */
 func (this *Trie) StartsWith(prefix string) bool {
-	return false
+	root := this.root
+
+	for i := range prefix {
+		root = root.children[prefix[i]-'a']
+		if root == nil {
+			return false
+		}
+	}
+
+	return true
 }
