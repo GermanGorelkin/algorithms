@@ -5,6 +5,35 @@ import (
 	"testing"
 )
 
+func Test_Search(t *testing.T) {
+	t.Run("1", func(t *testing.T) {
+		trie := Constructor()
+
+		assert.False(t, trie.StartsWith("a"))
+
+		trie.Insert("b")
+		assert.True(t, trie.Search("b"))
+		assert.False(t, trie.Search("a"))
+
+		trie.Insert("bb")
+		assert.True(t, trie.Search("bb"))
+
+		assert.False(t, trie.Search("bbb"))
+		assert.False(t, trie.Search("bba"))
+
+		trie.Insert("apple")
+		assert.True(t, trie.Search("apple"))
+
+		assert.False(t, trie.Search("a"))
+		assert.False(t, trie.Search("ap"))
+		assert.False(t, trie.Search("app"))
+		assert.False(t, trie.Search("appl"))
+		assert.False(t, trie.Search("appleq"))
+		assert.False(t, trie.Search("appp"))
+
+	})
+}
+
 func Test_StartsWith(t *testing.T) {
 	t.Run("1", func(t *testing.T) {
 		trie := Constructor()

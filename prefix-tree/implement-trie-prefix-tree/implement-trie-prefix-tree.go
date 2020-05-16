@@ -71,7 +71,16 @@ func (this *Trie) Insert(word string) {
 
 /** Returns if the word is in the trie. */
 func (this *Trie) Search(word string) bool {
-	return false
+	root := this.root
+
+	for i := range word {
+		root = root.children[word[i]-'a']
+		if root == nil {
+			return false
+		}
+	}
+
+	return root.isWord
 }
 
 /** Returns if there is any word in the trie that starts with the given prefix. */
