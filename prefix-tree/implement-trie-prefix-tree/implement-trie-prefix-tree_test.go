@@ -5,6 +5,27 @@ import (
 	"testing"
 )
 
+func Test_Insert(t *testing.T) {
+	t.Run("1", func(t *testing.T) {
+		trie := Constructor()
+
+		trie.Insert("a")
+		assert.Equal(t, []byte{'a'}, TrieTraversal(trie.root))
+
+		trie.Insert("b")
+		assert.Equal(t, []byte{'a', 'b'}, TrieTraversal(trie.root))
+
+		trie.Insert("bb")
+		assert.Equal(t, []byte{'a', 'b', 'b'}, TrieTraversal(trie.root))
+
+		trie.Insert("apple")
+		assert.Equal(t, []byte{'a', 'p', 'p', 'l', 'e', 'b', 'b'}, TrieTraversal(trie.root))
+
+		trie.Insert("bar")
+		assert.Equal(t, []byte{'a', 'p', 'p', 'l', 'e', 'b', 'a', 'r', 'b'}, TrieTraversal(trie.root))
+	})
+}
+
 func TestTrieTraversal(t *testing.T) {
 	t.Run("1", func(t *testing.T) {
 

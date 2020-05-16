@@ -63,7 +63,7 @@ func (this *Trie) Insert(word string) {
 				char: word[i],
 			}
 		}
-		root = root.children['a'-i]
+		root = root.children[word[i]-'a']
 	}
 
 	root.isWord = true
