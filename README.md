@@ -73,6 +73,7 @@ LeetCode
 |993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Go](./binary-tree/cousins-in-binary-tree/cousins-in-binary-tree.go)|Easy| Tree |
 |997|[Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | [Go](./graph/find-the-town-judge/find-the-town-judge.go)|Easy| Graph |
 |1232|[Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | [Go](./array-string/check-if-it-is-a-straight-line/check-if-it-is-a-straight-line.go)|Easy| Array |
+|1295|[Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Go](./array-string/find-numbers-with-even-number-of-digits/find-numbers-with-even-number-of-digits.go)|Easy| Array |
 
 [Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./array-string/counting-elements/counting-elements.go) | Easy | Array |
 
