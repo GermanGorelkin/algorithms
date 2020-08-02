@@ -62,6 +62,7 @@ LeetCode
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./array-string/array-partition-i/array-partition-i.go)|Easy| Array |
 |589|[N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | [Go](./tree/n-ary-tree-preorder-traversal/n-ary-tree-preorder-traversal.go)|Easy| Tree |
 |590|[N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal/) | [Go](./tree/n-ary-tree-postorder-traversal/n-ary-tree-postorder-traversal.go)|Easy| Tree |
+|658|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/) | [Go](./binary-search/find-k-closest-elements/find-k-closest-elements.go)|Medium| Binary Search |
 |700|[Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | [Go](./binary-tree/search-in-a-binary-search-tree/search-in-a-binary-search-tree.go)|Easy| Tree |
 |701|[Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | [Go](./binary-tree/insert-into-a-binary-search-tree/insert-into-a-binary-search-tree.go)|Medium| Tree |
 |704|[Binary Search](https://leetcode.com/problems/binary-search/) | [Go](./binary-search/binary-search/binary-search.go)|Easy| Binary Search |
