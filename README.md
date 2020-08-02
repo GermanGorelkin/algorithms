@@ -14,6 +14,7 @@ LeetCode
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Go](./binary-search/search-in-rotated-sorted-array/search-in-rotated-sorted-array.go)|Medium| Binary Search |
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Go](./binary-search/find-first-and-last-position-of-element-in-sorted-array/find-first-and-last-position-of-element-in-sorted-array.go)|Medium| Binary Search |
 |49|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Go](./array-string/group-anagrams/group-anagrams.go)|Medium| Array |
+|50|[Pow(x, n)](https://leetcode.com/problems/powx-n/) | [Go](./binary-search/powx-n/powx-n.go)|Medium| Binary Search |
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [Go](./array-string/maximum-subarray/maximum-subarray.go)|Easy| Array |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Go](./array-string/spiral-matrix/spiral-matrix.go)|Medium| Array |
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./array-string/plus-one/plus-one.go)|Easy| Array |
