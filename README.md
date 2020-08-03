@@ -30,6 +30,7 @@ LeetCode
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Go](./array-string/best-time-to-buy-and-sell-stock/best-time-to-buy-and-sell-stock.go)|Easy| Array |
 |122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Go](./array-string/best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.go)|Easy| Array |
+|125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Go](./array-string/valid-palindrome/valid-palindrome.go)|Easy| Array |
 |136|[Single Number](https://leetcode.com/problems/single-number/) | [Go](./array-string/single-number/single-number.go)|Easy| Array |
 |144|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | [Go](./binary-tree/binary-tree-preorder-traversal/binary-tree-preorder-traversal.go)|Medium| Tree |
 |145|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | [Go](./binary-tree/binary-tree-postorder-traversal/binary-tree-postorder-traversal.go)|Hard| Tree |
