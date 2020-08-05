@@ -9,6 +9,7 @@ LeetCode
 | # | Title | Solution | Difficulty | Tags  |
 |---| ----- | -------- | ---------- | ------|
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Go](./array-string/longest-common-prefix/longest-common-prefix.go)|Easy| Array |
+|24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Go](./linkedlist/swap-nodes-in-pairs/swap-nodes-in-pairs.go)|Medium| Linked List |
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [Go](./array-string/remove-element/remove-element.go)|Easy| Array |
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Go](./array-string/implement-strstr/implement-strstr.go)|Easy| Array |
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Go](./binary-search/search-in-rotated-sorted-array/search-in-rotated-sorted-array.go)|Medium| Binary Search |
