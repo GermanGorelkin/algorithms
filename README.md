@@ -61,6 +61,7 @@ LeetCode
 |485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |476|[Number Complement](https://leetcode.com/problems/number-complement/) | [Go](./bit-manipulation/number-complement/number-complement.go)|Easy| Bit manipulation |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
+|509|[Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [Go](./array-string/fibonacci-number/fibonacci-number.go)|Easy| Array |
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [Go](./array-string/detect-capital/detect-capital.go)|Easy| Array |
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./array-string/contiguous-array/contiguous-array.go)|Medium| Array |
 |540|[Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | [Go](./binary-search/single-element-in-a-sorted-array/single-element-in-a-sorted-array.go)|Medium| Binary Search |
