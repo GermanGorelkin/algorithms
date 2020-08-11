@@ -50,6 +50,7 @@ LeetCode
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Go](./array-string/minimum-size-subarray-sum/minimum-size-subarray-sum.go)|Medium| Array |
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [Go](./array-string/move-zeroes/move-zeroes.go)|Easy| Array |
+|322|[Coin Change](https://leetcode.com/problems/coin-change/) | [Go](./dp/coin-change/coin-change.go)|Medium| DP |
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [Go](./array-string/reverse-string/reverse-string.go)|Easy| Array |
 |367|[Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | [Go](./binary-search/valid-perfect-square/valid-perfect-square.go)|Easy| Binary Search |
 |374|[Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | [Go](./binary-search/guess-number-higher-or-lower)|Easy| Binary Search |
