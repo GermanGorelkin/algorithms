@@ -18,6 +18,7 @@ LeetCode
 |50|[Pow(x, n)](https://leetcode.com/problems/powx-n/) | [Go](./binary-search/powx-n/powx-n.go)|Medium| Binary Search |
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [Go](./array-string/maximum-subarray/maximum-subarray.go)|Easy| Array |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Go](./array-string/spiral-matrix/spiral-matrix.go)|Medium| Array |
+|62|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [Go](./dp/unique-paths/unique-paths.go)|Medium| DP |
 |64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [Go](./dp/minimum-path-sum/minimum-path-sum.go)|Medium| DP |
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./array-string/plus-one/plus-one.go)|Easy| Array |
 |67|[Add Binary](https://leetcode.com/problems/add-binary/) | [Go](./array-string/add-binary/add-binary.go)|Easy| Array |
