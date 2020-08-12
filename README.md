@@ -32,6 +32,7 @@ LeetCode
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Go](./binary-tree/maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.go)|Easy| Tree |
 |112|[Path Sum](https://leetcode.com/problems/path-sum/) | [Go](./binary-tree/path-sum/path-sum.go)|Easy| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
+|119|[Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | [Go](./array-string/pascals-triangle-ii/pascals-triangle-ii.go)|Easy| Array |
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Go](./array-string/best-time-to-buy-and-sell-stock/best-time-to-buy-and-sell-stock.go)|Easy| Array |
 |122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Go](./array-string/best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.go)|Easy| Array |
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Go](./array-string/valid-palindrome/valid-palindrome.go)|Easy| Array |
