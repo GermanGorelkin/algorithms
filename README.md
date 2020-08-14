@@ -45,6 +45,7 @@ LeetCode
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [Go](./array-string/majority-element/majority-element.go)|Easy| Array |
 |171|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Go](./math/excel-sheet-column-number/excel-sheet-column-number.go)|Easy| Math |
 |173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [Go](./binary-tree/binary-search-tree-iterator/binary-search-tree-iterator.go)|Medium| Tree |
+|176|[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/) | [Go](./sql/second-highest-salary/second-highest-salary.sql)|Easy| SQL |
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/) | [Go](./array-string/rotate-array/rotate-array.go)|Easy| Array |
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Go](./graph/number-of-islands/number-of-islands.go)|Medium| Graph |
 |202|[Happy Number](https://leetcode.com/problems/happy-number/) | [Go](./hash-table/happy-number/happy-number.go)|Easy| Hash Table |
