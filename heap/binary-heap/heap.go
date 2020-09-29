@@ -23,6 +23,66 @@ type heap struct {
 	t    heapType
 }
 
+func (h *heap) SiftDown(i int) {
+	if h.t == minHeap {
+		minSiftDown(h.data, i)
+	} else {
+		maxSiftDown(h.data, i)
+	}
+}
+
+/*
+	                  9
+	               /     \
+		          6       4
+		        /   \   /   \
+		       9     8 12    7
+		      / \
+		     11
+
+		    0 1 2 3 4 5  6  7 8
+		    3 6 4 9 8 12 7 11 9
+*/
+func minSiftDown(data []int, i int) {
+	length := len(data)
+	for 2*i+1 < length {
+		left := 2*i + 1
+		right := 2*i + 2
+
+		smallest := left
+		if right < length && data[right] < data[smallest] {
+			smallest = right
+		}
+
+		if data[i] <= data[smallest] {
+			break
+		}
+
+		data[smallest], data[i] = data[i], data[smallest]
+		i = smallest
+	}
+}
+
+func maxSiftDown(data []int, i int) {
+	length := len(data)
+	for 2*i+1 < length {
+		left := 2*i + 1
+		right := 2*i + 2
+
+		largest := left
+		if right < length && data[right] > data[largest] {
+			largest = right
+		}
+
+		if data[i] >= data[largest] {
+			break
+		}
+
+		data[largest], data[i] = data[i], data[largest]
+		i = largest
+	}
+}
+
 func (h *heap) SiftUp(i int) {
 	if h.t == minHeap {
 		minSiftUp(h.data, i)
