@@ -108,11 +108,14 @@ func (h *heap) Insert(val int) {
 }
 
 func (h *heap) Extract() int {
-	val := h.data[0]
-	if len(h.data) > 1 {
-		h.data[0] = h.data[len(h.data)-1]
-		h.data = h.data[:len(h.data)-1]
-		h.SiftDown(0)
+	if len(h.data) == 0 {
+		return 0
 	}
+
+	val := h.data[0]
+	h.data[0] = h.data[len(h.data)-1]
+	h.data = h.data[:len(h.data)-1]
+	h.SiftDown(0)
+
 	return val
 }

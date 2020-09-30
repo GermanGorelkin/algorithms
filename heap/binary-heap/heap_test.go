@@ -2,6 +2,7 @@ package binary_heap
 
 import (
 	"github.com/stretchr/testify/assert"
+	"sort"
 	"testing"
 )
 
@@ -41,6 +42,39 @@ func Test_Insert(t *testing.T) {
 
 		h.Insert(200)
 		assert.Equal(t, []int{200, 20, 10, 9, 11}, h.data)
+	})
+}
+
+func Test_Extract(t *testing.T) {
+	t.Run("min", func(t *testing.T) {
+		h := heap{
+			data: []int{3, 6, 4, 9, 8, 12, 7, 11, 9},
+			t:    minHeap,
+		}
+
+		data := make([]int, len(h.data))
+		copy(data, h.data)
+		sort.Ints(data)
+
+		for _, v := range data {
+			assert.Equal(t, v, h.Extract())
+		}
+	})
+	t.Run("max", func(t *testing.T) {
+		h := heap{
+			data: []int{100, 60, 40, 35, 8, 12, 7, 11, 9},
+			t:    maxHeap,
+		}
+
+		data := make([]int, len(h.data))
+		copy(data, h.data)
+		sort.Slice(data, func(i, j int) bool {
+			return data[i] > data[j]
+		})
+
+		for _, v := range data {
+			assert.Equal(t, v, h.Extract())
+		}
 	})
 }
 
