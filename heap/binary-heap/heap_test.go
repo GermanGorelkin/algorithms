@@ -5,6 +5,45 @@ import (
 	"testing"
 )
 
+func Test_Insert(t *testing.T) {
+	t.Run("min", func(t *testing.T) {
+		h := heap{t: minHeap}
+
+		h.Insert(10)
+		assert.Equal(t, []int{10}, h.data)
+
+		h.Insert(9)
+		assert.Equal(t, []int{9, 10}, h.data)
+
+		h.Insert(8)
+		assert.Equal(t, []int{8, 10, 9}, h.data)
+
+		h.Insert(7)
+		assert.Equal(t, []int{7, 8, 9, 10}, h.data)
+
+		h.Insert(11)
+		assert.Equal(t, []int{7, 8, 9, 10, 11}, h.data)
+	})
+	t.Run("max", func(t *testing.T) {
+		h := heap{t: maxHeap}
+
+		h.Insert(10)
+		assert.Equal(t, []int{10}, h.data)
+
+		h.Insert(9)
+		assert.Equal(t, []int{10, 9}, h.data)
+
+		h.Insert(11)
+		assert.Equal(t, []int{11, 9, 10}, h.data)
+
+		h.Insert(20)
+		assert.Equal(t, []int{20, 11, 10, 9}, h.data)
+
+		h.Insert(200)
+		assert.Equal(t, []int{200, 20, 10, 9, 11}, h.data)
+	})
+}
+
 func Test_minSiftDown(t *testing.T) {
 	t.Run("one", func(t *testing.T) {
 		data := []int{3}

@@ -62,7 +62,6 @@ func minSiftDown(data []int, i int) {
 		i = smallest
 	}
 }
-
 func maxSiftDown(data []int, i int) {
 	length := len(data)
 	for 2*i+1 < length {
@@ -90,7 +89,6 @@ func (h *heap) SiftUp(i int) {
 		maxSiftUp(h.data, i)
 	}
 }
-
 func minSiftUp(data []int, i int) {
 	for data[i] < data[(i-1)/2] {
 		data[i], data[(i-1)/2] = data[(i-1)/2], data[i]
@@ -102,4 +100,19 @@ func maxSiftUp(data []int, i int) {
 		data[i], data[(i-1)/2] = data[(i-1)/2], data[i]
 		i = (i - 1) / 2
 	}
+}
+
+func (h *heap) Insert(val int) {
+	h.data = append(h.data, val)
+	h.SiftUp(len(h.data) - 1)
+}
+
+func (h *heap) Extract() int {
+	val := h.data[0]
+	if len(h.data) > 1 {
+		h.data[0] = h.data[len(h.data)-1]
+		h.data = h.data[:len(h.data)-1]
+		h.SiftDown(0)
+	}
+	return val
 }
