@@ -90,6 +90,7 @@ LeetCode
 |997|[Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | [Go](./graph/find-the-town-judge/find-the-town-judge.go)|Easy| Graph |
 |1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [Go](./dp/longest-common-subsequence/longest-common-subsequence.go)|Medium| DP |
 |1155|[Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) | [Go](./dp/number-of-dice-rolls-with-target-sum/number-of-dice-rolls-with-target-sum.go)|Medium| DP |
+|1221|[Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/) | [Go](./greedy/split-a-string-in-balanced-strings/split-a-string-in-balanced-strings.go)|Easy| Greedy |
 |1232|[Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | [Go](./array-string/check-if-it-is-a-straight-line/check-if-it-is-a-straight-line.go)|Easy| Array |
 |1295|[Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Go](./array-string/find-numbers-with-even-number-of-digits/find-numbers-with-even-number-of-digits.go)|Easy| Array |
 
