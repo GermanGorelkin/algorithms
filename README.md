@@ -93,6 +93,7 @@ LeetCode
 |1221|[Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/) | [Go](./greedy/split-a-string-in-balanced-strings/split-a-string-in-balanced-strings.go)|Easy| Greedy |
 |1232|[Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | [Go](./array-string/check-if-it-is-a-straight-line/check-if-it-is-a-straight-line.go)|Easy| Array |
 |1295|[Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Go](./array-string/find-numbers-with-even-number-of-digits/find-numbers-with-even-number-of-digits.go)|Easy| Array |
+|1403|[Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) | [Go](./greedy/minimum-subsequence-in-non-increasing-order/minimum-subsequence-in-non-increasing-order.go)|Easy| Greedy |
 
 [Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./array-string/counting-elements/counting-elements.go) | Easy | Array |
 
