@@ -85,6 +85,7 @@ LeetCode
 |747|[Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | [Go](./array-string/largest-number-at-least-twice-of-others/largest-number-at-least-twice-of-others.go)|Easy| Array |
 |752|[Open the Lock](https://leetcode.com/problems/open-the-lock/) | [Go](./graph/open-the-lock/open-the-lock.go)|Medium| Graph |
 |771|[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | [Go](./array-string/jewels-and-stones/jewels-and-stones.go)|Easy| Array |
+|944|[Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/) | [Go](./greedy/delete-columns-to-make-sorted/delete-columns-to-make-sorted.go)|Easy| Greedy |
 |993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Go](./binary-tree/cousins-in-binary-tree/cousins-in-binary-tree.go)|Easy| Tree |
 |994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Go](./graph/rotting-oranges/rotting-oranges.go)|Medium| Graph |
 |997|[Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | [Go](./graph/find-the-town-judge/find-the-town-judge.go)|Easy| Graph |
