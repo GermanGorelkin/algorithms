@@ -14,6 +14,7 @@ LeetCode
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Go](./array-string/implement-strstr/implement-strstr.go)|Easy| Array |
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Go](./binary-search/search-in-rotated-sorted-array/search-in-rotated-sorted-array.go)|Medium| Binary Search |
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Go](./binary-search/find-first-and-last-position-of-element-in-sorted-array/find-first-and-last-position-of-element-in-sorted-array.go)|Medium| Binary Search |
+|46|[Permutations](https://leetcode.com/problems/permutations/) | [Go](./backtracking/permutations/permutations.go)|Medium| Backtracking |
 |49|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Go](./array-string/group-anagrams/group-anagrams.go)|Medium| Array |
 |50|[Pow(x, n)](https://leetcode.com/problems/powx-n/) | [Go](./binary-search/powx-n/powx-n.go)|Medium| Binary Search |
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [Go](./array-string/maximum-subarray/maximum-subarray.go)|Easy| Array |
