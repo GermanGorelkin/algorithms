@@ -8,6 +8,7 @@ LeetCode
 
 | # | Title | Solution | Difficulty | Tags  |
 |---| ----- | -------- | ---------- | ------|
+|7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Go](./math/reverse-integer/reverse-integer.go)|Easy| Math |
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Go](./array-string/longest-common-prefix/longest-common-prefix.go)|Easy| Array |
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Go](./linkedlist/swap-nodes-in-pairs/swap-nodes-in-pairs.go)|Medium| Linked List |
 |27|[Remove Element](https://leetcode.com/problems/remove-element/) | [Go](./array-string/remove-element/remove-element.go)|Easy| Array |
