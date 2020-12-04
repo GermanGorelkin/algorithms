@@ -54,6 +54,7 @@ LeetCode
 |202|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Go](./linkedlist/reverse-linked-list/reverse-linked-list.go)|Easy| Linked List |
 |208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Go](./prefix-tree/implement-trie-prefix-tree/implement-trie-prefix-tree.go)|Medium| Tree |
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Go](./array-string/minimum-size-subarray-sum/minimum-size-subarray-sum.go)|Medium| Array |
+|217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Go](./array-string/contains-duplicate/contains-duplicate.go)|Easy| Array |
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [Go](./array-string/move-zeroes/move-zeroes.go)|Easy| Array |
 |322|[Coin Change](https://leetcode.com/problems/coin-change/) | [Go](./dp/coin-change/coin-change.go)|Medium| DP |
