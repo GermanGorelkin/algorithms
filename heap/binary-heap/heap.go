@@ -23,6 +23,35 @@ type heap struct {
 	t    heapType
 }
 
+func (h *heap) ChangePriority(index int, val int) {
+	if h.t == minHeap {
+		minChangePriority(h.data, index, val)
+	} else {
+		maxChangePriority(h.data, index, val)
+	}
+}
+
+func maxChangePriority(data []int, i int, val int) {
+	old := data[i]
+	data[i] = val
+
+	if val > old {
+		maxSiftUp(data, i)
+	} else {
+		maxSiftDown(data, i)
+	}
+}
+func minChangePriority(data []int, i int, val int) {
+	old := data[i]
+	data[i] = val
+
+	if val > old {
+		minSiftDown(data, i)
+	} else {
+		minSiftUp(data, i)
+	}
+}
+
 func (h *heap) SiftDown(i int) {
 	if h.t == minHeap {
 		minSiftDown(h.data, i)
@@ -31,6 +60,27 @@ func (h *heap) SiftDown(i int) {
 	}
 }
 
+/*
+func down(h Interface, i0, n int) bool {
+	i := i0
+	for {
+		j1 := 2*i + 1
+		if j1 >= n || j1 < 0 { // j1 < 0 after int overflow
+			break
+		}
+		j := j1 // left child
+		if j2 := j1 + 1; j2 < n && h.Less(j2, j1) {
+			j = j2 // = 2*i + 2  // right child
+		}
+		if !h.Less(j, i) {
+			break
+		}
+		h.Swap(i, j)
+		i = j
+	}
+	return i > i0
+}
+*/
 /*
 	                  9
 	               /     \
