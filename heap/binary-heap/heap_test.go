@@ -368,8 +368,8 @@ func Test_minChangePriority(t *testing.T) {
 
 	*/
 	t.Run("4", func(t *testing.T) {
-		data := []int{6, 4, 9, 8, 12, 7, 11, 9, 3}
-		want := []int{1, 6, 9, 8, 4, 7, 11, 9, 3}
+		data := []int{3, 6, 4, 9, 8, 12, 7, 11, 9}
+		want := []int{1, 3, 4, 9, 6, 12, 7, 11, 9}
 
 		minChangePriority(data, 4, 1)
 
@@ -431,5 +431,133 @@ func Test_maxChangePriority(t *testing.T) {
 		maxChangePriority(data, 3, 350)
 
 		assert.Equal(t, want, data)
+	})
+}
+
+func Test_Remove(t *testing.T) {
+	tests := map[string]struct {
+		heapType    heapType
+		data        []int
+		removeIndex int
+		want        []int
+	}{
+		"min_1": {
+			heapType:    minHeap,
+			data:        []int{},
+			removeIndex: 0,
+			want:        []int{},
+		},
+		"min_2": {
+			heapType:    minHeap,
+			data:        []int{1},
+			removeIndex: 0,
+			want:        []int{},
+		},
+		"min_3": {
+			heapType:    minHeap,
+			data:        []int{1, 2},
+			removeIndex: 0,
+			want:        []int{2},
+		},
+		"min_4": {
+			heapType:    minHeap,
+			data:        []int{1, 2},
+			removeIndex: 1,
+			want:        []int{1},
+		},
+		"min_5": {
+			heapType:    minHeap,
+			data:        []int{1, 2, 3},
+			removeIndex: 2,
+			want:        []int{1, 2},
+		},
+		"min_6": {
+			heapType:    minHeap,
+			data:        []int{1, 2, 3},
+			removeIndex: 1,
+			want:        []int{1, 3},
+		},
+		"max_1": {
+			heapType:    maxHeap,
+			data:        []int{},
+			removeIndex: 0,
+			want:        []int{},
+		},
+		"max_2": {
+			heapType:    maxHeap,
+			data:        []int{1},
+			removeIndex: 0,
+			want:        []int{},
+		},
+		"max_3": {
+			heapType:    maxHeap,
+			data:        []int{2, 1},
+			removeIndex: 0,
+			want:        []int{1},
+		},
+		"max_4": {
+			heapType:    maxHeap,
+			data:        []int{2, 1},
+			removeIndex: 1,
+			want:        []int{2},
+		},
+		"max_5": {
+			heapType:    maxHeap,
+			data:        []int{3, 2, 1},
+			removeIndex: 2,
+			want:        []int{3, 2},
+		},
+		"max_6": {
+			heapType:    maxHeap,
+			data:        []int{3, 2, 1},
+			removeIndex: 1,
+			want:        []int{3, 1},
+		},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			h := heap{
+				data: tc.data,
+				t:    tc.heapType,
+			}
+			h.Remove(tc.removeIndex)
+
+			assert.Equal(t, tc.want, h.data)
+		})
+	}
+
+	t.Run("min_7", func(t *testing.T) {
+		/*
+							3
+			        6		      4
+			      9	  8		   12	7
+				11	9
+		*/
+		h := heap{
+			t:    minHeap,
+			data: []int{3, 6, 4, 9, 8, 12, 7, 11, 9},
+		}
+		h.Remove(3)
+		want := []int{3, 6, 4, 9, 8, 12, 7, 11}
+		assert.Equal(t, want, h.data)
+
+	})
+
+	t.Run("min_8", func(t *testing.T) {
+		/*
+							3
+			        6		      4
+			      9	  8		   12	7
+				11	9
+		*/
+		h := heap{
+			t:    minHeap,
+			data: []int{3, 6, 4, 9, 8, 12, 7, 11, 9},
+		}
+		h.Remove(5)
+		want := []int{3, 6, 4, 9, 8, 9, 7, 11}
+		assert.Equal(t, want, h.data)
+
 	})
 }

@@ -23,6 +23,22 @@ type heap struct {
 	t    heapType
 }
 
+// func (h *heap) heapify() {
+// 	if h.t == minHeap {
+// 		minHeapify()
+// 	} else {
+// 		maxHeapify()
+// 	}
+// }
+//
+// func minHeapify() {
+//
+// }
+//
+// func maxHeapify() {
+//
+// }
+
 func (h *heap) ChangePriority(index int, val int) {
 	if h.t == minHeap {
 		minChangePriority(h.data, index, val)
@@ -168,4 +184,23 @@ func (h *heap) Extract() int {
 	h.SiftDown(0)
 
 	return val
+}
+
+func (h *heap) Remove(i int) {
+	l := len(h.data)
+	if l == 0 || l < i {
+		return
+	}
+	if l == 1 {
+		h.data = h.data[:0]
+		return
+	}
+	if l-1 == i {
+		h.data = h.data[:len(h.data)-1]
+		return
+	}
+
+	val := h.data[l-1]
+	h.data = h.data[:l-1]
+	h.ChangePriority(i, val)
 }
