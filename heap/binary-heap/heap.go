@@ -47,7 +47,9 @@ func BuildHeap(data []int, t heapType) *heap {
 		data: data,
 		t:    t,
 	}
-	for i := len(h.data) / 2; i >= 0; i-- {
+	// len(h.data)/2      - first leaf
+	// len(h.data)/2 - 1  - last no leaf
+	for i := len(h.data)/2 - 1; i >= 0; i-- {
 		h.SiftDown(i)
 	}
 	return &h
