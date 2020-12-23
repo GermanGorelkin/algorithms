@@ -612,3 +612,46 @@ func Test_BuildHeap(t *testing.T) {
 		})
 	}
 }
+
+func Test_HeapSort(t *testing.T) {
+	tests := map[string]struct {
+		data []int
+		want []int
+	}{
+		"1": {
+			data: []int{},
+			want: []int{},
+		},
+		"2": {
+			data: []int{1},
+			want: []int{1},
+		},
+		"3": {
+			data: []int{1, 2},
+			want: []int{1, 2},
+		},
+		"4": {
+			data: []int{2, 1},
+			want: []int{1, 2},
+		},
+		"5": {
+			data: []int{3, 1, 2},
+			want: []int{1, 2, 3},
+		},
+		"6": {
+			data: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+			want: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+		},
+		"7": {
+			data: []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+			want: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+		},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			HeapSort(tc.data)
+			assert.Equal(t, tc.want, tc.data)
+		})
+	}
+}

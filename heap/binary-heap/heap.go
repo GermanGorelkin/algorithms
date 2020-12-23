@@ -23,6 +23,25 @@ type heap struct {
 	t    heapType
 }
 
+func HeapSort(data []int) {
+	l := len(data)
+	if l == 0 || l == 1 {
+		return
+	}
+
+	BuildHeap(data, maxHeap)
+	size := l - 1
+
+	for i := size; i >= 0; i-- {
+		data[0], data[size] = data[size], data[0]
+		data = data[:size]
+		maxSiftDown(data, 0)
+		size--
+	}
+
+	data = data[:l-1]
+}
+
 func BuildHeap(data []int, t heapType) *heap {
 	h := heap{
 		data: data,
