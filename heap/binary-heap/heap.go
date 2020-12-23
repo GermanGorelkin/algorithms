@@ -23,21 +23,16 @@ type heap struct {
 	t    heapType
 }
 
-// func (h *heap) heapify() {
-// 	if h.t == minHeap {
-// 		minHeapify()
-// 	} else {
-// 		maxHeapify()
-// 	}
-// }
-//
-// func minHeapify() {
-//
-// }
-//
-// func maxHeapify() {
-//
-// }
+func BuildHeap(data []int, t heapType) *heap {
+	h := heap{
+		data: data,
+		t:    t,
+	}
+	for i := len(h.data) / 2; i >= 0; i-- {
+		h.SiftDown(i)
+	}
+	return &h
+}
 
 func (h *heap) ChangePriority(index int, val int) {
 	if h.t == minHeap {

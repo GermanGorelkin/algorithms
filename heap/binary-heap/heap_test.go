@@ -561,3 +561,54 @@ func Test_Remove(t *testing.T) {
 
 	})
 }
+
+func Test_BuildHeap(t *testing.T) {
+	tests := map[string]struct {
+		data []int
+		th   heapType
+		want []int
+	}{
+		"min_1": {
+			data: []int{},
+			th:   minHeap,
+			want: []int{},
+		},
+		"min_2": {
+			data: []int{1},
+			th:   minHeap,
+			want: []int{1},
+		},
+		"min_3": {
+			data: []int{1, 2},
+			th:   minHeap,
+			want: []int{1, 2},
+		},
+		"min_4": {
+			data: []int{2, 1},
+			th:   minHeap,
+			want: []int{1, 2},
+		},
+		"min_5": {
+			data: []int{3, 1, 2},
+			th:   minHeap,
+			want: []int{1, 3, 2},
+		},
+		"min_6": {
+			data: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+			th:   minHeap,
+			want: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+		},
+		"min_7": {
+			data: []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+			th:   minHeap,
+			want: []int{1, 2, 4, 3, 6, 5, 8, 10, 7, 9},
+		},
+	}
+
+	for name, tc := range tests {
+		t.Run(name, func(t *testing.T) {
+			h := BuildHeap(tc.data, tc.th)
+			assert.Equal(t, tc.want, h.data)
+		})
+	}
+}
