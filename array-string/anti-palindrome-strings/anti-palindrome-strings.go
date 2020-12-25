@@ -13,7 +13,7 @@ func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 200_000)
 
 	for i := 0; i < T; i++ {
-		line, _ := reader.ReadBytes('\n')
+		line, _ := reader.ReadSlice('\n')
 		l := len(line)
 		if line[l-1] == '\n' {
 			line = line[:len(line)-1]
