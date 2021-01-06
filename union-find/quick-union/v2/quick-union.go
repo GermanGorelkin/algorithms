@@ -41,11 +41,10 @@ func (qu *quickUnion) Union(p, q int) {
 
 //
 func (qu *quickUnion) root3(i int) int {
-	for qu.nodes[i] != i {
+	if qu.nodes[i] != i {
 		qu.nodes[i] = qu.root3(qu.nodes[i])
-		i = qu.nodes[i]
 	}
-	return i
+	return qu.nodes[i]
 }
 
 // path compression
