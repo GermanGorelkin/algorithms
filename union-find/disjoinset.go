@@ -24,7 +24,7 @@ func (d *DisjointSet) MakeSet(x int) {
 }
 // Find finds ID x
 func (d *DisjointSet) Find(x int) int {
-	for x != d.data[x] {
+	if x != d.data[x] {
 		d.data[x] = d.Find(d.data[x])
 	}
 	return d.data[x]
