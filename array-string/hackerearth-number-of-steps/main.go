@@ -4,49 +4,32 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
-	"strings"
 )
 // go build main.go && cat 430a731a427e11ea.txt.clean.txt | ./main
 // Correct Output: 3056888
 func main() {
-	var N int
-	_, _ = fmt.Scanf("%d", &N)
+	reader := bufio.NewReaderSize(os.Stdin, 1024)
+	var buf []byte
 
-	reader := bufio.NewReaderSize(os.Stdin, 100_000)
-	var line []byte
-	var ss []string
+	N := readInt(reader, buf)
 
 	minVal := 5000 // max val
 	// first line
-	line, _ = reader.ReadSlice('\n')
-	if line[len(line)-1] == '\n' {
-		line = line[:len(line)-1]
-	}
-	ss = strings.Split(string(line), " ")
-
-	a := make([]int, len(ss))
-	for i, s := range ss {
-		v, _ := strconv.Atoi(s)
-		a[i] = v
-		if v < minVal {
-			minVal = v
+	a := make([]int, N)
+	for i := range a {
+		a[i] = readInt(reader, buf)
+		if a[i] < minVal {
+			minVal = a[i]
 		}
 	}
-
 	// second line
-	line, _ = reader.ReadSlice('\n')
-	if line[len(line)-1] == '\n' {
-		line = line[:len(line)-1]
+	b := make([]int, N)
+	for i := range b {
+		b[i] = readInt(reader, buf)
 	}
-	ss = strings.Split(string(line), " ")
 
-	b := make([]int, len(ss))
-	for i, s := range ss {
-		v, _ := strconv.Atoi(s)
-		b[i] = v
-	}
 	steps := numberOfSteps(a, b, minVal)
+
 	fmt.Println(steps)
 }
 
@@ -69,4 +52,39 @@ func numberOfSteps(a, b []int, min int) int {
 	}
 
 	return steps
+}
+
+// --
+func readInt(r *bufio.Reader, buf []byte) (num int) {
+	var err error
+	var b byte
+	buf = buf[:0]
+	for {
+		b, err = r.ReadByte()
+		if b == ' ' || b == '\n' || err != nil {
+			return parseInt(buf)
+		} else {
+			buf = append(buf, b)
+		}
+	}
+}
+
+func parseInt(b []byte) int {
+	neg := false
+	if b[0] == '-' {
+		neg = true
+		b = b[1:]
+	}
+
+	var n int
+	for _, c := range b {
+		c = c - '0'
+		n *= 10
+		n += int(c)
+	}
+
+	if neg {
+		n = -n
+	}
+	return n
 }
