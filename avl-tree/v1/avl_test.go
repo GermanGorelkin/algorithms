@@ -220,3 +220,35 @@ func Test_balance(t *testing.T) {
 
 	})
 }
+
+func Test_insert(t *testing.T) {
+	/*
+		no balance tree
+				 40
+			  /      \
+			20        50
+		  /    \
+		10		25
+				/ \
+			  22   30
+
+
+		balance tree
+				    25
+				 /     \
+			    20      40
+			  /   \    /  \
+		    10    22  30  50
+	*/
+	vals := []int{40, 20, 10, 25, 30, 22, 50}
+
+	var root *node
+
+	for _, val := range vals {
+		root = insert(root, val)
+	}
+
+	want := []int{10, 20, 22, 25, 30, 40, 50}
+	got := inorderTraversal(root)
+	assert.Equal(t, want, got)
+}

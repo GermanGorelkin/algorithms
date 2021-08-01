@@ -7,6 +7,19 @@ type node struct {
 	left, right *node
 }
 
+// insert inserts new node with val to tree
+func insert(p *node, val int) *node {
+	if p == nil {
+		return newNode(val)
+	}
+	if p.val > val {
+		p.left = insert(p.left, val)
+	} else if p.val < val {
+		p.right = insert(p.right, val)
+	}
+	return balance(p)
+}
+
 // balance
 func balance(p *node) *node {
 	if balanceFactor(p) == -2 {
