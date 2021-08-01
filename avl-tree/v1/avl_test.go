@@ -151,3 +151,72 @@ func Test_leftRotate(t *testing.T) {
 
 	})
 }
+
+func Test_balance(t *testing.T) {
+	t.Run("right-left", func(t *testing.T) {
+		t.Skip()
+		/*
+				  10
+				   \
+				    30
+				   /
+			      20
+
+						   20
+						 /   \
+					  10	  30
+		*/
+		n10 := newNode(10)
+		n20 := newNode(20)
+		n30 := newNode(30)
+
+		n10.right = n30
+		n30.left = n20
+
+		fixHeight(n20)
+		fixHeight(n30)
+		fixHeight(n10)
+
+		root := n10
+
+		newRoot := balance(root)
+
+		want := []int{10, 20, 30}
+		got := inorderTraversal(newRoot)
+		assert.Equal(t, want, got)
+
+	})
+
+	t.Run("left-right", func(t *testing.T) {
+		/*
+			     30
+			    /
+			  10
+			    \
+				 20
+
+							   20
+							 /   \
+						  10	  30
+		*/
+		n10 := newNode(10)
+		n20 := newNode(20)
+		n30 := newNode(30)
+
+		n30.left = n10
+		n10.right = n20
+
+		fixHeight(n20)
+		fixHeight(n10)
+		fixHeight(n30)
+
+		root := n30
+
+		newRoot := balance(root)
+
+		want := []int{10, 20, 30}
+		got := inorderTraversal(newRoot)
+		assert.Equal(t, want, got)
+
+	})
+}
