@@ -1,3 +1,8 @@
+/*
+https://stepik.org/lesson/13239/step/6?unit=3425
+Задача на программирование: декодирование Хаффмана
+*/
+
 package main
 
 import (

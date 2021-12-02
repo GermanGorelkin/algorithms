@@ -1,3 +1,8 @@
+/*
+Задача на программирование: очередь с приоритетами
+https://stepik.org/lesson/13240/step/8?unit=3426
+*/
+
 package main
 
 import (
