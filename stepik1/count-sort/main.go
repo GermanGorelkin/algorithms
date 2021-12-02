@@ -1,3 +1,8 @@
+/*
+https://stepik.org/lesson/13252/step/3?unit=3437
+Задача на программирование: сортировка подсчётом
+*/
+
 package main
 
 import (

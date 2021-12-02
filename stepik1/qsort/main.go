@@ -1,3 +1,8 @@
+/*
+https://stepik.org/lesson/13249/step/6?unit=3434
+Задача на программирование: точки и отрезки
+*/
+
 package main
 
 import (
@@ -12,13 +17,13 @@ import (
 type PointType int
 
 const (
-	LEFT PointType = iota - 1 // -1
-	POINT					  // 0
-	RIGHT					  // 1
+	LEFT  PointType = iota - 1 // -1
+	POINT                      // 0
+	RIGHT                      // 1
 )
 
 type Point struct {
-	x int
+	x     int
 	ptype PointType
 	index int
 }
@@ -42,11 +47,10 @@ func main() {
 
 	s, _ := reader.ReadString('\n')
 	ss := strings.Split(s, " ")
-	for i:=0;i<m;i++{
+	for i := 0; i < m; i++ {
 		l, _ = strconv.Atoi(ss[i])
 		points = append(points, Point{x: l, ptype: POINT, index: i})
 	}
-
 
 	sort.Slice(points, func(i, j int) bool {
 		if points[i].x != points[j].x {

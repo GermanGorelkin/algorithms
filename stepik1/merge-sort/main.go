@@ -1,3 +1,7 @@
+/*
+https://stepik.org/lesson/13248/step/5?unit=3433
+Задача на программирование: число инверсий
+*/
 package main
 
 func sort(data []int) []int {

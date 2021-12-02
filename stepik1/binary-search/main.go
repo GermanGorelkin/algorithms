@@ -1,3 +1,8 @@
+/*
+https://stepik.org/lesson/13246/step/4?unit=3431
+Задача на программирование: двоичный поиск
+*/
+
 package main
 
 import (
