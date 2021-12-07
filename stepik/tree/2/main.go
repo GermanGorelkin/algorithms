@@ -65,6 +65,61 @@ func (v *validatorV2) isValidBST(root, low, high *node) bool {
 	return v.isValidBST(root.left, low, root) && v.isValidBST(root.rigth, root, high)
 }
 
+// Iterative Traversal
+type validatorV3 struct{}
+
+func (v *validatorV3) isValidBST(root *node) bool {
+	if root == nil {
+		return true
+	}
+	lower := new(stack)
+	upper := new(stack)
+	stk := new(stack)
+	stk.push(root)
+
+	for !stk.isEmpty() {
+		root := stk.pop()
+		low := lower.pop()
+		high := upper.pop()
+
+		if low != nil && root.key <= low.key || high != nil && root.key >= high.key {
+			return false
+		}
+
+		if root.rigth != nil {
+			stk.push(root.rigth)
+			lower.push(root)
+			upper.push(high)
+		}
+		if root.left != nil {
+			stk.push(root.left)
+			lower.push(low)
+			upper.push(root)
+		}
+	}
+
+	return true
+}
+
+type stack struct {
+	data []*node
+}
+
+func (st *stack) pop() *node {
+	if len(st.data) == 0 {
+		return nil
+	}
+	v := st.data[len(st.data)-1]
+	st.data = st.data[:len(st.data)-1]
+	return v
+}
+func (st *stack) push(v *node) {
+	st.data = append(st.data, v)
+}
+func (st *stack) isEmpty() bool {
+	return len(st.data) == 0
+}
+
 func treeBuild(n int, r io.Reader) *node {
 	reader := bufio.NewReaderSize(r, 1024)
 
