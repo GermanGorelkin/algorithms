@@ -21,9 +21,8 @@ func main() {
 	}
 
 	root := treeBuild(n, os.Stdin)
-	var vl validator
-	isBTS := vl.useInOrder(root)
-	if isBTS {
+	var vl validatorV1
+	if vl.isValidBST(root) {
 		fmt.Println("CORRECT")
 	} else {
 		fmt.Println("INCORRECT")
@@ -31,23 +30,39 @@ func main() {
 	}
 }
 
-type validator struct {
+// InOrder Traversal
+type validatorV1 struct {
 	prev *node
 }
 
-func (v *validator) useInOrder(root *node) bool {
+func (v *validatorV1) isValidBST(root *node) bool {
 	if root == nil {
 		return true
 	}
 
-	if !v.useInOrder(root.left) {
+	if !v.isValidBST(root.left) {
 		return false
 	}
-	if v.prev != nil && v.prev.key > root.key {
+	if v.prev != nil && v.prev.key >= root.key {
 		return false
 	}
 	v.prev = root
-	return v.useInOrder(root.rigth)
+	return v.isValidBST(root.rigth)
+}
+
+// Recursive Traversal
+type validatorV2 struct{}
+
+func (v *validatorV2) isValidBST(root, low, high *node) bool {
+	if root == nil {
+		return true
+	}
+
+	if low != nil && root.key <= low.key || high != nil && root.key >= high.key {
+		return false
+	}
+
+	return v.isValidBST(root.left, low, root) && v.isValidBST(root.rigth, root, high)
 }
 
 func treeBuild(n int, r io.Reader) *node {
