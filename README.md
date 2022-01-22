@@ -8,23 +8,52 @@ Algorithms and data structures
 * [Симуляция обработки сетевых пакетов](./stepik/base/simulating-packet-processing/main.go)
 * [Стек с поддержкой максимума](./stepik/base/max-stack/main.go)
 * [Максимум в скользящем окне](./stepik/base/max-sliding-window/main.go)
-
 ### Очереди с приоритетом и системы непересекающихся множеств
 * [Построение кучи](./stepik/heap/build-heap/main.go)
 * [Параллельная обработка](./stepik/heap/scheduler/main.go)
 * [Объединение таблиц](./stepik/union-find/union-tables/main.go)
 * [Автоматический анализ программ](./stepik/union-find/auto-program-analysis/main.go)
-
-
 ### Хеш-таблицы
 * [Телефонная книга](./stepik/hash-tables/1/main.go)
 * [Хеширование цепочками](./stepik/hash-tables/2/main.go)
 * [Поиск образца в тексте](./stepik/hash-tables/3/main.go)
-
-
 ### Деревья поиска
 * [Обход двоичного дерева](./stepik/tree/1/main.go)
 * [Проверка свойства дерева поиска](./stepik/tree/2/main.go)
+
+## [Stepik. Алгоритмы: теория и практика. Методы](https://stepik.org/course/217)
+### Числа Фибоначчи
+* [Небольшое число Фибоначчи](./stepik1/fib/1/main.go)
+* [Последняя цифра большого числа Фибоначчи](./stepik1/fib/2/main.go)
+* [Огромное число Фибоначчи по модулю](./stepik1/fib/3/main.go)
+### Жадные алгоритмы
+* [Покрыть отрезки точками](./stepik1/greedy-algorithms/1/main.go)
+* [Непрерывный рюкзак](./stepik1/greedy-algorithms/2/main.go)
+* [Различные слагаемые](./stepik1/greedy-algorithms/3/main.go)
+#### Коды Хаффмана
+* [Кодирование Хаффмана](./stepik1/code-huffman/encoding/main.go)
+* [Декодирование Хаффмана](./stepik1/code-huffman/decoding/main.go)
+#### Очередь с приоритетами
+* [Очередь с приоритетами](./stepik1/priority-queue/main.go)
+### Разделяй и властвуй
+#### Двоичный поиск
+* [Двоичный поиск](./stepik1/binary-search/main.go)
+#### Сортировка слиянием
+* [Число инверсий](./stepik1/merge-sort/main.go)
+#### Быстрая сортировка
+* [Точки и отрезки](./stepik1/qsort/main.go)
+#### Сортировки, основанные не на сравнениях
+* [Cортировка подсчётом](./stepik1/count-sort/main.go)
+### Динамическое программирование
+
+* [Наибольшая последовательнократная подпоследовательность](./stepik1/dp/1/main.go)
+* [Наибольшая невозрастающая подпоследовательность](./stepik1/dp/2/main.go)
+* [Расстояние редактирования](./stepik1/dp/3/main.go)
+* [Рюкзак](./stepik1/dp/4/main.go)
+* [Лестница](./stepik1/dp/5/main.go)
+* [Калькулятор](./stepik1/dp/6/main.go)
+
+
 
 # LeetCode
 
