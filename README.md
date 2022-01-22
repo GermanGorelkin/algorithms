@@ -1,10 +1,32 @@
 Algorithms and data structures
 ========
 
-LeetCode
-========
+## [Stepik. Алгоритмы: теория и практика. Структуры данных](https://stepik.org/course/1547)
+### Базовые структуры данных
+* [Расстановка скобок в коде](./stepik/base/balanced-brackets/main.go)
+* [Высота дерева](./stepik/base/height-tree/main.go)
+* [Симуляция обработки сетевых пакетов](./stepik/base/simulating-packet-processing/main.go)
+* [Стек с поддержкой максимума](./stepik/base/max-stack/main.go)
+* [Максимум в скользящем окне](./stepik/base/max-sliding-window/main.go)
 
-### LeetCode Algorithm
+### Очереди с приоритетом и системы непересекающихся множеств
+* [Построение кучи](./stepik/heap/build-heap/main.go)
+* [Параллельная обработка](./stepik/heap/scheduler/main.go)
+* [Объединение таблиц](./stepik/union-find/union-tables/main.go)
+* [Автоматический анализ программ](./stepik/union-find/auto-program-analysis/main.go)
+
+
+### Хеш-таблицы
+* [Телефонная книга](./stepik/hash-tables/1/main.go)
+* [Хеширование цепочками](./stepik/hash-tables/2/main.go)
+* [Поиск образца в тексте](./stepik/hash-tables/3/main.go)
+
+
+### Деревья поиска
+* [Обход двоичного дерева](./stepik/tree/1/main.go)
+* [Проверка свойства дерева поиска](./stepik/tree/2/main.go)
+
+# LeetCode
 
 | # | Title | Solution | Difficulty | Tags  |
 |---| ----- | -------- | ---------- | ------|
