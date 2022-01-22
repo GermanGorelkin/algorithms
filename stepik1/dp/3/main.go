@@ -1,3 +1,8 @@
+/*
+Задача на программирование: расстояние редактирования
+https://stepik.org/lesson/13258/step/8?unit=3443
+*/
+
 package main
 
 import "fmt"

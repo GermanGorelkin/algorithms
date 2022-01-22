@@ -1,5 +1,6 @@
 /*
 https://stepik.org/lesson/13262/step/4?unit=3447
+Задача на программирование: лестница
 */
 
 package main
