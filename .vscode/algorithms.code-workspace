@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "algorithms",
+			"path": "../"
+		},
+		{	
+			"name": "golang",
+			"path": "../golang"
+		},
+		{	
+			"name": "rust",
+			"path": "../rust"
+		}
+	],
+	"settings": {}
+}
