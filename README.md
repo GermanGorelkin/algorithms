@@ -150,6 +150,7 @@ Algorithms and data structures
 |1155|[Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) | [Go](./golang/dp/number-of-dice-rolls-with-target-sum/number-of-dice-rolls-with-target-sum.go)|Medium| DP |
 |1221|[Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/) | [Go](./golang/greedy/split-a-string-in-balanced-strings/split-a-string-in-balanced-strings.go)|Easy| Greedy |
 |1232|[Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | [Go](./golang/array-string/check-if-it-is-a-straight-line/check-if-it-is-a-straight-line.go)|Easy| Array |
+|1286|[Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/) | [Go](./golang/backtracking/iterator-for-combination/iterator-for-combination.go)|Medium| Backtracking |
 |1295|[Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Go](./golang/array-string/find-numbers-with-even-number-of-digits/find-numbers-with-even-number-of-digits.go)|Easy| Array |
 |1403|[Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) | [Go](./golang/greedy/minimum-subsequence-in-non-increasing-order/minimum-subsequence-in-non-increasing-order.go)|Easy| Greedy |
 
