@@ -88,6 +88,7 @@ Algorithms and data structures
 |112|[Path Sum](https://leetcode.com/problems/path-sum/) | [Go](./golang/binary-tree/path-sum/path-sum.go)|Easy| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./golang/array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
 |119|[Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | [Go](./golang/array-string/pascals-triangle-ii/pascals-triangle-ii.go)|Easy| Array |
+|120|[Triangle](https://leetcode.com/problems/triangle/) | [Rust](./rust/src/triangle.rs)|Medium| DP |
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Go](./golang/array-string/best-time-to-buy-and-sell-stock/best-time-to-buy-and-sell-stock.go)|Easy| Array |
 |122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Go](./golang/array-string/best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.go)|Easy| Array |
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Go](./golang/array-string/valid-palindrome/valid-palindrome.go)|Easy| Array |
