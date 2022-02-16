@@ -73,7 +73,7 @@ Algorithms and data structures
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [Go](./golang/array-string/maximum-subarray/maximum-subarray.go)|Easy| Array |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Go](./golang/array-string/spiral-matrix/spiral-matrix.go)|Medium| Array |
 |62|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [Go](./golang/dp/unique-paths/unique-paths.go)|Medium| DP |
-|64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [Go](./golang/dp/minimum-path-sum/minimum-path-sum.go)|Medium| DP |
+|64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [Rust](./rust/src/min_path_sum.rs) [Go](./golang/dp/minimum-path-sum/minimum-path-sum.go)|Medium| DP |
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./golang/array-string/plus-one/plus-one.go)|Easy| Array |
 |67|[Add Binary](https://leetcode.com/problems/add-binary/) | [Go](./golang/array-string/add-binary/add-binary.go)|Easy| Array |
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx/) | [Go](./golang/binary-search/sqrtx/sqrtx.go)|Easy| Binary Search |
