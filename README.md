@@ -59,6 +59,7 @@ Algorithms and data structures
 
 | # | Title | Solution | Difficulty | Tags  |
 |---| ----- | -------- | ---------- | ------|
+|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./rust/src/two_sum.rs)|Easy| Array |
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Go](./golang/math/reverse-integer/reverse-integer.go)|Easy| Math |
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Go](./golang/array-string/longest-common-prefix/longest-common-prefix.go)|Easy| Array |
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Go](./golang/linkedlist/swap-nodes-in-pairs/swap-nodes-in-pairs.go)|Medium| Linked List |
