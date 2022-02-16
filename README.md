@@ -112,6 +112,7 @@ Algorithms and data structures
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./golang/binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
 |297|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Go](./golang/binary-tree/serialize-and-deserialize-binary-tree/main.go)|Hard| Binary Tree |
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [Go](./golang/array-string/move-zeroes/move-zeroes.go)|Easy| Array |
+|303|[Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | [Rust](./rust/src/range_sum_query_immutable.rs)|Easy| Array |
 |322|[Coin Change](https://leetcode.com/problems/coin-change/) | [Go](./golang/dp/coin-change/coin-change.go)|Medium| DP |
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [Go](./golang/array-string/reverse-string/reverse-string.go)|Easy| Array |
 |367|[Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | [Go](./golang/binary-search/valid-perfect-square/valid-perfect-square.go)|Easy| Binary Search |
