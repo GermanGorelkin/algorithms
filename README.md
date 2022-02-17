@@ -59,7 +59,7 @@ Algorithms and data structures
 
 | # | Title | Solution | Difficulty | Tags  |
 |---| ----- | -------- | ---------- | ------|
-|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./rust/src/two_sum.rs)|Easy| Array |
+|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./rust/leetcode/src/two_sum.rs)|Easy| Array |
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Go](./golang/math/reverse-integer/reverse-integer.go)|Easy| Math |
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | [Go](./golang/array-string/longest-common-prefix/longest-common-prefix.go)|Easy| Array |
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Go](./golang/linkedlist/swap-nodes-in-pairs/swap-nodes-in-pairs.go)|Medium| Linked List |
@@ -73,7 +73,7 @@ Algorithms and data structures
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [Go](./golang/array-string/maximum-subarray/maximum-subarray.go)|Easy| Array |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | [Go](./golang/array-string/spiral-matrix/spiral-matrix.go)|Medium| Array |
 |62|[Unique Paths](https://leetcode.com/problems/unique-paths/) | [Go](./golang/dp/unique-paths/unique-paths.go)|Medium| DP |
-|64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [Rust](./rust/src/min_path_sum.rs) [Go](./golang/dp/minimum-path-sum/minimum-path-sum.go)|Medium| DP |
+|64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | [Rust](./rust/leetcode/src/min_path_sum.rs) [Go](./golang/dp/minimum-path-sum/minimum-path-sum.go)|Medium| DP |
 |66|[Plus One](https://leetcode.com/problems/plus-one/) | [Go](./golang/array-string/plus-one/plus-one.go)|Easy| Array |
 |67|[Add Binary](https://leetcode.com/problems/add-binary/) | [Go](./golang/array-string/add-binary/add-binary.go)|Easy| Array |
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx/) | [Go](./golang/binary-search/sqrtx/sqrtx.go)|Easy| Binary Search |
@@ -88,7 +88,7 @@ Algorithms and data structures
 |112|[Path Sum](https://leetcode.com/problems/path-sum/) | [Go](./golang/binary-tree/path-sum/path-sum.go)|Easy| Tree |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [Go](./golang/array-string/pascals-triangle/pascals-triangle.go)|Easy| Array |
 |119|[Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | [Go](./golang/array-string/pascals-triangle-ii/pascals-triangle-ii.go)|Easy| Array |
-|120|[Triangle](https://leetcode.com/problems/triangle/) | [Rust](./rust/src/triangle.rs)|Medium| DP |
+|120|[Triangle](https://leetcode.com/problems/triangle/) | [Rust](./rust/leetcode/src/triangle.rs)|Medium| DP |
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Go](./golang/array-string/best-time-to-buy-and-sell-stock/best-time-to-buy-and-sell-stock.go)|Easy| Array |
 |122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [Go](./golang/array-string/best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.go)|Easy| Array |
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | [Go](./golang/array-string/valid-palindrome/valid-palindrome.go)|Easy| Array |
@@ -101,6 +101,7 @@ Algorithms and data structures
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [Go](./golang/array-string/majority-element/majority-element.go)|Easy| Array |
 |171|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Go](./golang/math/excel-sheet-column-number/excel-sheet-column-number.go)|Easy| Math |
 |173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | [Go](./golang/binary-tree/binary-search-tree-iterator/binary-search-tree-iterator.go)|Medium| Tree |
+|174|[Dungeon Game](https://leetcode.com/problems/dungeon-game/) | [Rust](./rust/leetcode/src/dungeon_game.rs)|Hard| DP |
 |176|[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/) | [Go](./golang/sql/second-highest-salary/second-highest-salary.sql)|Easy| SQL |
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/) | [Go](./golang/array-string/rotate-array/rotate-array.go)|Easy| Array |
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Go](./golang/graph/number-of-islands/number-of-islands.go)|Medium| Graph |
@@ -109,12 +110,12 @@ Algorithms and data structures
 |208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Go](./golang/prefix-tree/implement-trie-prefix-tree/implement-trie-prefix-tree.go)|Medium| Tree |
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Go](./golang/array-string/minimum-size-subarray-sum/minimum-size-subarray-sum.go)|Medium| Array |
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Go](./golang/array-string/contains-duplicate/contains-duplicate.go)|Easy| Array |
-|228|[Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Rust](./rust/src/summary_ranges.rs)|Easy| Array |
-|268|[Missing Number](https://leetcode.com/problems/missing-number/) | [Rust](./rust/src/missing_number.rs)|Easy| Array |
+|228|[Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Rust](./rust/leetcode/src/summary_ranges.rs)|Easy| Array |
+|268|[Missing Number](https://leetcode.com/problems/missing-number/) | [Rust](./rust/leetcode/src/missing_number.rs)|Easy| Array |
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./golang/binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
 |297|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Go](./golang/binary-tree/serialize-and-deserialize-binary-tree/main.go)|Hard| Binary Tree |
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [Go](./golang/array-string/move-zeroes/move-zeroes.go)|Easy| Array |
-|303|[Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | [Rust](./rust/src/range_sum_query_immutable.rs)|Easy| Array |
+|303|[Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | [Rust](./rust/leetcode/src/range_sum_query_immutable.rs)|Easy| Array |
 |322|[Coin Change](https://leetcode.com/problems/coin-change/) | [Go](./golang/dp/coin-change/coin-change.go)|Medium| DP |
 |344|[Reverse String](https://leetcode.com/problems/reverse-string/) | [Go](./golang/array-string/reverse-string/reverse-string.go)|Easy| Array |
 |367|[Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | [Go](./golang/binary-search/valid-perfect-square/valid-perfect-square.go)|Easy| Binary Search |
