@@ -110,6 +110,7 @@ Algorithms and data structures
 |208|[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Go](./golang/prefix-tree/implement-trie-prefix-tree/implement-trie-prefix-tree.go)|Medium| Tree |
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Go](./golang/array-string/minimum-size-subarray-sum/minimum-size-subarray-sum.go)|Medium| Array |
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [Go](./golang/array-string/contains-duplicate/contains-duplicate.go)|Easy| Array |
+|221|[Maximal Square](https://leetcode.com/problems/maximal-square/) | [Rust](./rust/leetcode/src/maximal_square.rs)|Medium| DP |
 |228|[Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Rust](./rust/leetcode/src/summary_ranges.rs)|Easy| Array |
 |268|[Missing Number](https://leetcode.com/problems/missing-number/) | [Rust](./rust/leetcode/src/missing_number.rs)|Easy| Array |
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./golang/binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
