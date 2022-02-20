@@ -114,6 +114,7 @@ Algorithms and data structures
 |228|[Summary Ranges](https://leetcode.com/problems/summary-ranges/) | [Rust](./rust/leetcode/src/summary_ranges.rs)|Easy| Array |
 |268|[Missing Number](https://leetcode.com/problems/missing-number/) | [Rust](./rust/leetcode/src/missing_number.rs)|Easy| Array |
 |278|[First Bad Version](https://leetcode.com/problems/first-bad-version/) | [Go](./golang/binary-search/first-bad-version/first-bad-version.go)|Easy| Binary Search |
+|279|[Perfect Squares](https://leetcode.com/problems/perfect-squares/) | [Rust](./rust/leetcode/src/perfect_squares.rs) [Go](./golang/graph/perfect-squares/perfect-squares.go)|Medium| DP;BFS |
 |297|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Go](./golang/binary-tree/serialize-and-deserialize-binary-tree/main.go)|Hard| Binary Tree |
 |283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/) | [Go](./golang/array-string/move-zeroes/move-zeroes.go)|Easy| Array |
 |303|[Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | [Rust](./rust/leetcode/src/range_sum_query_immutable.rs)|Easy| Array |
