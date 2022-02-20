@@ -1,4 +1,5 @@
 mod _3sum;
+mod coin_change;
 mod dungeon_game;
 mod maximal_square;
 mod min_path_sum;
