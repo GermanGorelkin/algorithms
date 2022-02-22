@@ -137,6 +137,7 @@ Algorithms and data structures
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./golang/array-string/contiguous-array/contiguous-array.go)|Medium| Array |
 |540|[Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | [Go](./golang/binary-search/single-element-in-a-sorted-array/single-element-in-a-sorted-array.go)|Medium| Binary Search |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./golang/array-string/array-partition-i/array-partition-i.go)|Easy| Array |
+|474|[Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | [Rust](./rust/leetcode/src/ones_and_zeroes.rs)|Medium| DP |
 |589|[N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | [Go](./golang/tree/n-ary-tree-preorder-traversal/n-ary-tree-preorder-traversal.go)|Easy| Tree |
 |590|[N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal/) | [Go](./golang/tree/n-ary-tree-postorder-traversal/n-ary-tree-postorder-traversal.go)|Easy| Tree |
 |658|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/) | [Go](./golang/binary-search/find-k-closest-elements/find-k-closest-elements.go)|Medium| Binary Search |

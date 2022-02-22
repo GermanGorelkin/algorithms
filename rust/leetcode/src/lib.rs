@@ -4,6 +4,7 @@ mod dungeon_game;
 mod maximal_square;
 mod min_path_sum;
 mod missing_number;
+mod ones_and_zeroes;
 mod perfect_squares;
 mod range_sum_query_immutable;
 mod summary_ranges;
