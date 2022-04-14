@@ -1,6 +1,10 @@
 Algorithms and data structures
 ========
 
+## [Stepik. Основы Теории Графов для спортивного программирования](https://stepik.org/course/111246/syllabus)
+### Матрица смежности. Список ребер
+* [1](./stepik-graph-theory/1-3/1/main.go)
+
 ## [Stepik. Алгоритмы: теория и практика. Структуры данных](https://stepik.org/course/1547)
 ### Базовые структуры данных
 * [Расстановка скобок в коде](./stepik/base/balanced-brackets/main.go)
