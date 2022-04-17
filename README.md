@@ -10,6 +10,9 @@ Algorithms and data structures
 * [5](./stepik-graph-theory/1-3/5/main.go)
 * [6](./stepik-graph-theory/1-3/6/main.go)
 
+### Упорядоченный список дуг
+* [1](./stepik-graph-theory/1-4/1/main.go)
+
 ## [Stepik. Алгоритмы: теория и практика. Структуры данных](https://stepik.org/course/1547)
 ### Базовые структуры данных
 * [Расстановка скобок в коде](./stepik/base/balanced-brackets/main.go)
