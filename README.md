@@ -17,6 +17,10 @@ Algorithms and data structures
 * [4](./stepik-graph-theory/1-4/4/main.go)
 * [5](./stepik-graph-theory/1-4/5/main.go)
 
+### Список смежности и поиск компонент связности
+
+* [1](./stepik-graph-theory/1-5/1/main.go)
+
 ## [Stepik. Алгоритмы: теория и практика. Структуры данных](https://stepik.org/course/1547)
 ### Базовые структуры данных
 * [Расстановка скобок в коде](./stepik/base/balanced-brackets/main.go)
