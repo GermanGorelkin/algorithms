@@ -15,6 +15,7 @@ Algorithms and data structures
 * [2](./stepik-graph-theory/1-4/2/main.go)
 * [3](./stepik-graph-theory/1-4/3/main.go)
 * [4](./stepik-graph-theory/1-4/4/main.go)
+* [5](./stepik-graph-theory/1-4/5/main.go)
 
 ## [Stepik. Алгоритмы: теория и практика. Структуры данных](https://stepik.org/course/1547)
 ### Базовые структуры данных
