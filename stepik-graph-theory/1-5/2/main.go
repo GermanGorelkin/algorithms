@@ -20,14 +20,14 @@ func main() {
 	list := ReadAdjacencyList(N, M)
 	used := make([]int, N)
 
-	index := make([]int, 0, N)
+	var count int
 	for {
 		var exists bool
 		for i, v := range used {
 			if v == 0 {
 				exists = true
-				index = append(index, i)
-				dfs(i+1, i, list, used)
+				count++
+				dfs(count, i, list, used)
 			}
 		}
 		if !exists {
@@ -40,27 +40,24 @@ func main() {
 
 	writer := bufio.NewWriterSize(os.Stdout, 100_000)
 
-	writer.WriteString(strconv.Itoa(len(index)))
+	writer.WriteString(strconv.Itoa(count))
 	writer.WriteString("\n")
 
-	comp := make([]int, 0, N)
+	comp := make([][]int, count)
 
-	for _, ind := range index {
-		for i := ind; i < len(used); i++ {
-			if used[i] == ind+1 {
-				comp = append(comp, i)
-			}
-		}
+	for i, v := range used {
+		comp[v-1] = append(comp[v-1], i+1)
+	}
 
-		writer.WriteString(strconv.Itoa(len(comp)))
+	for _, vv := range comp {
+		writer.WriteString(strconv.Itoa(len(vv)))
 		writer.WriteString("\n")
-		for _, v := range comp {
-			writer.WriteString(strconv.Itoa(v + 1))
+
+		for _, v := range vv {
+			writer.WriteString(strconv.Itoa(v))
 			writer.WriteString(" ")
 		}
 		writer.WriteString("\n")
-
-		comp = comp[:0]
 	}
 
 	writer.Flush()
