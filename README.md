@@ -28,6 +28,7 @@ Algorithms and data structures
 ### Список предков и поиск цикла в графе
 
 * [1](./stepik-graph-theory/1-7/1/main.go)
+* [2](./stepik-graph-theory/1-7/2/main.go)
 
 
 
