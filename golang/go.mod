@@ -1,6 +1,6 @@
 module github.com/germangorelkin/algorithms/golang
 
-go 1.17
+go 1.19
 
 require github.com/stretchr/testify v1.5.1
 
