@@ -186,6 +186,7 @@ Algorithms and data structures
 |993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Go](./golang/binary-tree/cousins-in-binary-tree/cousins-in-binary-tree.go)|Easy| Tree |
 |994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Go](./golang/graph/rotting-oranges/rotting-oranges.go)|Medium| Graph |
 |997|[Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | [Go](./golang/graph/find-the-town-judge/find-the-town-judge.go)|Easy| Graph |
+|1837|[Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/) | [Go](./golang/array-string/check-if-the-sentence-is-pangram/check-if-the-sentence-is-pangram.go)|Easy| String |
 |1137|[N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | [Go](./golang/dp/n-th-tribonacci-number/n-th-tribonacci-number.go)|Easy| DP |
 |1143|[Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | [Go](./golang/dp/longest-common-subsequence/longest-common-subsequence.go)|Medium| DP |
 |1155|[Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/) | [Go](./golang/dp/number-of-dice-rolls-with-target-sum/number-of-dice-rolls-with-target-sum.go)|Medium| DP |
