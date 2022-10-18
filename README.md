@@ -98,6 +98,7 @@ Algorithms and data structures
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Go](./golang/array-string/implement-strstr/implement-strstr.go)|Easy| Array |
 |33|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Go](./golang/binary-search/search-in-rotated-sorted-array/search-in-rotated-sorted-array.go)|Medium| Binary Search |
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Go](./golang/binary-search/find-first-and-last-position-of-element-in-sorted-array/find-first-and-last-position-of-element-in-sorted-array.go)|Medium| Binary Search |
+|38|[Count and Say](https://leetcode.com/problems/count-and-say/) | [Go](./golang/array-string/count-and-say/count-and-say.go)|Medium| String |
 |46|[Permutations](https://leetcode.com/problems/permutations/) | [Go](./golang/backtracking/permutations/permutations.go)|Medium| Backtracking |
 |49|[Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [Go](./golang/array-string/group-anagrams/group-anagrams.go)|Medium| Array |
 |50|[Pow(x, n)](https://leetcode.com/problems/powx-n/) | [Go](./golang/binary-search/powx-n/powx-n.go)|Medium| Binary Search |
