@@ -35,6 +35,7 @@ Algorithms and data structures
 ### Подсчет высоты и диаметра дерева
 
 * [1](./stepik-graph-theory/1-8/1/main.go)
+* [2](./stepik-graph-theory/1-8/2/main.go)
 
 
 
