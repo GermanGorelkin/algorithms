@@ -22,7 +22,7 @@ Algorithms and data structures
 * [1](./stepik-graph-theory/1-5/1/main.go)
 * [2](./stepik-graph-theory/1-5/2/main.go)
 * [3](./stepik-graph-theory/1-5/3/main.go)
-* [4](./stepik-graph-theory/1-5/4/main.go) -
+* [4](./stepik-graph-theory/1-5/4/main.go)
 * [5](./stepik-graph-theory/1-5/5/main.go)
 
 ### Список предков и поиск цикла в графе
@@ -31,6 +31,10 @@ Algorithms and data structures
 * [2](./stepik-graph-theory/1-7/2/main.go)
 * [3]
 * [4](./stepik-graph-theory/1-7/4/main.go)
+
+### Подсчет высоты и диаметра дерева
+
+* [1](./stepik-graph-theory/1-8/1/main.go)
 
 
 
