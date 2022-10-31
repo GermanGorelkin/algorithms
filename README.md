@@ -37,6 +37,7 @@ Algorithms and data structures
 * [1](./stepik-graph-theory/1-8/1/main.go)
 * [2](./stepik-graph-theory/1-8/2/main.go)
 * [3](./stepik-graph-theory/1-8/3/main.go)
+* [4](./stepik-graph-theory/1-8/4/main.go)
 
 
 
