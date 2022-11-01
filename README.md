@@ -39,6 +39,10 @@ Algorithms and data structures
 * [3](./stepik-graph-theory/1-8/3/main.go)
 * [4](./stepik-graph-theory/1-8/4/main.go)
 
+### Обход в глубину на стеке
+
+* [1](./stepik-graph-theory/1-9/1/main.go)
+
 
 
 ## [Stepik. Алгоритмы: теория и практика. Структуры данных](https://stepik.org/course/1547)
