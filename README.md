@@ -174,15 +174,16 @@ Algorithms and data structures
 |429|[N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | [Go](./golang/tree/n-ary-tree-level-order-traversal/n-ary-tree-level-order-traversal.go)|Medium| Tree |
 |442|[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [Go](./golang/array-string/find-all-duplicates-in-an-array/find-all-duplicates-in-an-array.go)|Medium| Array |
 |450|[Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | [Go](./golang/binary-tree/delete-node-in-a-bst/delete-node-in-a-bst.go)|Medium| Tree |
-|485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./golang/array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
+|474|[Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | [Rust](./rust/leetcode/src/ones_and_zeroes.rs)|Medium| DP |
 |476|[Number Complement](https://leetcode.com/problems/number-complement/) | [Go](./golang/bit-manipulation/number-complement/number-complement.go)|Easy| Bit manipulation |
+|485|[Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Go](./golang/array-string/max-consecutive-ones/max-consecutive-ones.go)|Easy| Array |
 |498|[Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) | [Go](./golang/array-string/diagonal-traverse/diagonal-traverse.go)|Medium| Array |
-|509|[Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | [Go](./golang/array-string/fibonacci-number/fibonacci-number.go)|Easy| Array |
+|507|[Perfect Number](https://leetcode.com/problems/perfect-number/) | [Rust](./rust/leetcode/src/perfect_number.rs)|Easy| Array |
+|509|[Fibonacci Number]( https://leetcode.com/problems/fibonacci-number/) | [Go](./golang/array-string/fibonacci-number/fibonacci-number.go)|Easy| Array |
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital/) | [Go](./golang/array-string/detect-capital/detect-capital.go)|Easy| Array |
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/) | [Go](./golang/array-string/contiguous-array/contiguous-array.go)|Medium| Array |
 |540|[Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) | [Go](./golang/binary-search/single-element-in-a-sorted-array/single-element-in-a-sorted-array.go)|Medium| Binary Search |
 |561|[Array Partition I](https://leetcode.com/problems/array-partition-i/) | [Go](./golang/array-string/array-partition-i/array-partition-i.go)|Easy| Array |
-|474|[Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | [Rust](./rust/leetcode/src/ones_and_zeroes.rs)|Medium| DP |
 |589|[N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | [Go](./golang/tree/n-ary-tree-preorder-traversal/n-ary-tree-preorder-traversal.go)|Easy| Tree |
 |590|[N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal/) | [Go](./golang/tree/n-ary-tree-postorder-traversal/n-ary-tree-postorder-traversal.go)|Easy| Tree |
 |658|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/) | [Go](./golang/binary-search/find-k-closest-elements/find-k-closest-elements.go)|Medium| Binary Search |
@@ -209,7 +210,7 @@ Algorithms and data structures
 |1286|[Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/) | [Go](./golang/backtracking/iterator-for-combination/iterator-for-combination.go)|Medium| Backtracking |
 |1295|[Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Go](./golang/array-string/find-numbers-with-even-number-of-digits/find-numbers-with-even-number-of-digits.go)|Easy| Array |
 |1403|[Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) | [Go](./golang/greedy/minimum-subsequence-in-non-increasing-order/minimum-subsequence-in-non-increasing-order.go)|Easy| Greedy |
-|2432|[The Employee That Worked on the Longest Task](https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/) | [Rust](./rust/leetcode/src/the_employee_that_worked_on_the_longest_task.rs)|Easy| Greedy |
+|2432|[The Employee That Worked on the Longest Task](https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/) | [Rust](./rust/leetcode/src/the_employee_that_worked_on_the_longest_task.rs)|Easy| Array |
 
 [Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./golang/array-string/counting-elements/counting-elements.go) | Easy | Array |
 
