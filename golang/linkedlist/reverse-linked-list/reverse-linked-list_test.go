@@ -1,7 +1,7 @@
 package reverse_linked_list
 
 import (
-	ll "github.com/germangorelkin/algorithms/linkedlist"
+	ll "github.com/germangorelkin/algorithms/golang/linkedlist"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

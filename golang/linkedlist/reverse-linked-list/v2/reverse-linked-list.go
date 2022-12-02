@@ -1,7 +1,7 @@
 package v2
 
 import (
-	ll "github.com/germangorelkin/algorithms/linkedlist"
+	ll "github.com/germangorelkin/algorithms/golang/linkedlist"
 )
 
 /*

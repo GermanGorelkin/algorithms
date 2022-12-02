@@ -1,9 +1,10 @@
 package expn
 
 import (
-	"github.com/germangorelkin/algorithms/stack/basic"
 	"strconv"
 	"strings"
+
+	"github.com/germangorelkin/algorithms/golang/stack/basic"
 )
 
 /*

@@ -12,7 +12,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 package reverse_linked_list
 
-import ll "github.com/germangorelkin/algorithms/linkedlist"
+import ll "github.com/germangorelkin/algorithms/golang/linkedlist"
 
 func reverseList(head *ll.ListNode) *ll.ListNode {
 	if head == nil {

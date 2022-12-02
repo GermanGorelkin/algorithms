@@ -13,7 +13,7 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 package swap_nodes_in_pairs
 
 import (
-	ll "github.com/germangorelkin/algorithms/linkedlist"
+	ll "github.com/germangorelkin/algorithms/golang/linkedlist"
 )
 
 func swapPairs(head *ll.ListNode) *ll.ListNode {

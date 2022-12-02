@@ -2,7 +2,8 @@ package min
 
 import (
 	"errors"
-	"github.com/germangorelkin/algorithms/stack/basic"
+
+	"github.com/germangorelkin/algorithms/golang/stack/basic"
 )
 
 var (
