@@ -209,6 +209,7 @@ Algorithms and data structures
 |1286|[Iterator for Combination](https://leetcode.com/problems/iterator-for-combination/) | [Go](./golang/backtracking/iterator-for-combination/iterator-for-combination.go)|Medium| Backtracking |
 |1295|[Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Go](./golang/array-string/find-numbers-with-even-number-of-digits/find-numbers-with-even-number-of-digits.go)|Easy| Array |
 |1403|[Minimum Subsequence in Non-Increasing Order](https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/) | [Go](./golang/greedy/minimum-subsequence-in-non-increasing-order/minimum-subsequence-in-non-increasing-order.go)|Easy| Greedy |
+|2432|[The Employee That Worked on the Longest Task](https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/) | [Rust](./rust/leetcode/src/the_employee_that_worked_on_the_longest_task.rs)|Easy| Greedy |
 
 [Counting Elements](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3289/) | [Go](./golang/array-string/counting-elements/counting-elements.go) | Easy | Array |
 

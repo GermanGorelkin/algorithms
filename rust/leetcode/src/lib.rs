@@ -1,3 +1,4 @@
+mod _2_keys_keyboard;
 mod _3sum;
 mod coin_change;
 mod dungeon_game;
@@ -10,3 +11,4 @@ mod range_sum_query_immutable;
 mod summary_ranges;
 mod triangle;
 mod two_sum;
+mod the_employee_that_worked_on_the_longest_task;
