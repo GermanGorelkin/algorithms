@@ -197,6 +197,7 @@ Algorithms and data structures
 |747|[Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) | [Go](./golang/array-string/largest-number-at-least-twice-of-others/largest-number-at-least-twice-of-others.go)|Easy| Array |
 |752|[Open the Lock](https://leetcode.com/problems/open-the-lock/) | [Go](./golang/graph/open-the-lock/open-the-lock.go)|Medium| Graph |
 |771|[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | [Go](./golang/array-string/jewels-and-stones/jewels-and-stones.go)|Easy| Array |
+|872|[Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/description/) | [Go](./golang/binary-tree/leaf-similar-trees/leaf-similar-trees.go)|Easy| Binary Tree |
 |944|[Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/) | [Go](./golang/greedy/delete-columns-to-make-sorted/delete-columns-to-make-sorted.go)|Easy| Greedy |
 |993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/) | [Go](./golang/binary-tree/cousins-in-binary-tree/cousins-in-binary-tree.go)|Easy| Tree |
 |994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Go](./golang/graph/rotting-oranges/rotting-oranges.go)|Medium| Graph |
